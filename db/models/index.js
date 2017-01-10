@@ -5,5 +5,7 @@
 // to get access to the User model.
 
 const User = require('./user')
+const City = require('./city')
+const Order = require('./order')
 
-module.exports = {User}
+module.exports = {User, City, Order}
