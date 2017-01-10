@@ -28,7 +28,7 @@ const Review = db.define('review', {
   },
   authorName: {
     type: Sequelize.STRING,
-    allowNull: false         //if no name is provided, should result to "anonymous"
+    allowNull: false           //if no name is provided, should result to "anonymous" in express
   },
 })
 

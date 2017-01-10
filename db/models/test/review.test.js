@@ -9,7 +9,7 @@ describe('Review', () => {
   const exampleReview = {
     authorName: 'Susan McGee',
     title: 'Sun = fun',
-    description: "The sun I ordered was quite nice, round, and pleasant. and no i'm not talking about my husband",
+    description: "The sun that I ordered was quite nice, round, and pleasant. and no i'm not talking about my husband",
     rating: '5',
     authorId: 3,
     packageId: 4
