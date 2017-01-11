@@ -24,7 +24,7 @@ const Review = db.define('review', {
 
   classMethods: {
     //The caller of this function can calculate the average ratings by dividing total of all ratings by their number
-    getRating: (pkgId) => {
+    getPackagesById: (pkgId) => {
       return Review.findAll({
         where: {
           packageId: pkgId
