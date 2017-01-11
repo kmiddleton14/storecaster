@@ -4,21 +4,42 @@ const db = require('APP/db')
 const Package = require('APP/db/models/package')
 const {expect} = require('chai')
 
-describe('Package', () => {
+describe('package', () => {
   before('wait for the db', () => db.didSync)
   const examplePackage = {
-    totalPrice: 56.60,
-    status: 'Completed'
+    description: 'Susan McGee',
+    image: 'Sun = fun',
+    packageType: 'Template'
   }
 
-  it('has totalPrice and status', () =>
+  it('has all the expected properties', () =>
     Package.create(examplePackage)
     .then(Package => {
-        //Node Postgres converts DECIMAL to string
-        expect(Package.totalPrice).to.equal(examplePackage.totalPrice.toFixed(2));
-        expect(Package.status).to.equal(examplePackage.status);
+        expect(Package.description).to.equal(examplePackage.description);
+        expect(Package.image).to.equal(examplePackage.image);
+        expect(Package.packageType).to.equal(examplePackage.packageType);
     })
   )
 
-})
+  it('does not save record in the database if no description is provided', () => {
+    delete examplePackage.description;
+    let thePackage = Package.build(examplePackage);
+    thePackage.validate()
+      .then(result => expect(result.errors).to.exist)
+  })
 
+  it('does not save record in the database if no packageType is provided', () => {
+    delete examplePackage.packageType;
+    let thePackage = Package.build(examplePackage);
+    thePackage.validate()
+      .then(result => expect(result.errors).to.exist)
+  })
+
+  it('does not allow packateType other than Template and Custom', () => {
+    examplePackage.packageType = 'other'
+    let thePackage = Package.build(examplePackage);
+    thePackage.validate()
+      .then(result => expect(result.errors).to.exist)
+  })
+
+})

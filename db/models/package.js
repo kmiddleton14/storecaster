@@ -4,12 +4,16 @@ const Sequelize = require('sequelize')
 const db = require('APP/db')
 
 const Package = db.define('package', {
-  totalPrice: {
-    type: Sequelize.DECIMAL(10, 2),
+  description: {
+    type: Sequelize.TEXT,
     allowNull: false
   },
-  status: {
-    type: Sequelize.ENUM('Completed', 'Created', 'Processing', 'Cancelled'),
+  image: {
+    type: Sequelize.STRING,
+    allowNull: true
+  },
+  packageType: {
+    type: Sequelize.ENUM('Template', 'Custom'),
     allowNull: false
   }
 })
