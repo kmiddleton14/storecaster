@@ -15,8 +15,8 @@ module.exports = require('express').Router()
     .then(foundBase =>
       foundBase.update(req.body)
     .then(updatedBase => {
-      res.status(201).send({
-        weatherbase: foundBase,
+      res.status(202).send({
+        weatherbase: updatedBase,
         message: 'Updated successfully!'
       })
     })
