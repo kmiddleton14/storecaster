@@ -4,13 +4,19 @@ const Sequelize = require('sequelize')
 const db = require('APP/db')
 
 const Package = db.define('package', {
+  name: {
+    type: Sequelize.STRING,
+    defaultValue: ""
+  },
   description: {
     type: Sequelize.TEXT,
-    allowNull: false
+    defaultValue: ""
   },
-  image: {
+  imageURL: {
     type: Sequelize.STRING,
-    allowNull: true
+    validate: {
+      isUrl: true
+    }
   },
   packageType: {
     type: Sequelize.ENUM('Template', 'Custom'),
