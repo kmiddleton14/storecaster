@@ -7,5 +7,6 @@
 const User = require('./user')
 const City = require('./city')
 const Order = require('./order')
+const Package = require('./package')
 
-module.exports = {User, City, Order}
+module.exports = {User, City, Order, Package}
