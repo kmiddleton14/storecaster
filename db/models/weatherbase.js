@@ -5,7 +5,7 @@ const db = require('APP/db')
 
 const WeatherBase = db.define('weatherbase', {
   category: {
-    type: Sequelize.ENUM('Thunderstorm', 'Drizzle', 'Rain', 'Snow', 'Clear', 'Cloudy'),
+    type: Sequelize.ENUM('Rainy', 'Cloudy', 'Snowy', 'Sunny'),
     allowNull: false
   },
   name: {
