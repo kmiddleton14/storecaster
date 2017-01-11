@@ -3,7 +3,7 @@
 const db = require('APP/db')
 const City = db.model('city')
 
-const {forbidden,} = require('./auth.filters')
+const {forbidden} = require('./auth.filters')
 
 module.exports = require('express').Router()
 	.get('/', (req, res, next) => 
