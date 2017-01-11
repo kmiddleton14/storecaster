@@ -36,6 +36,4 @@ Order.belongsTo(City, {as: 'ship_city'})
 City.hasMany(Order)
 //Order.belongsTo(Payment, {as: 'payment'})
 
-
-module.exports = {User, City, Order, WeatherBase, WeatherExtra, Package, Review}
-
+module.exports = {User, City, Order, WeatherBase, WeatherExtra, Package, Review, OrderPackage}
