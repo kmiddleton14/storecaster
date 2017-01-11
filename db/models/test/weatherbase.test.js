@@ -26,7 +26,7 @@ describe('WeatherBase', () => {
     .then(weatherbase => {
         expect(weatherbase.category).to.equal(exampleWeatherBase.category);
         expect(weatherbase.name).to.equal(exampleWeatherBase.name);
-        expect(weatherbase.description).to.equal(exampleWeatherBase.description);exampleWeatherBase
+        expect(weatherbase.description).to.equal(exampleWeatherBase.description);
         expect(weatherbase.basePrice).to.equal(exampleWeatherBase.basePrice.toFixed(2));
         expect(weatherbase.imageURL).to.equal(exampleWeatherBase.imageURL);
     })
@@ -49,4 +49,9 @@ describe('WeatherBase', () => {
       expect(err.message).to.contain('invalid input value for enum enum_weatherbase_category: "HelloWorld"');
     })
   })
+
+  after(() => 
+    WeatherBase.truncate({ cascade: true })
+    .then(() => console.log('WeatherBase table cleared after testing!'))
+  )
 })
