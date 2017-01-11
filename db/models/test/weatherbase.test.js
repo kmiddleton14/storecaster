@@ -8,7 +8,7 @@ describe('WeatherBase', () => {
   before('wait for the db', () => db.didSync)
 
   const exampleWeatherBase = {
-    category: 'Thunderstorm',
+    category: 'Rainy',
     name: 'thunderstorm with heavy rain',
     description: 'A booming thunderstorm with a torrential downpour. Wow!',
     basePrice: 50.00,
