@@ -30,4 +30,8 @@ describe('City', () => {
     })
   })
 
+  after(() => 
+    City.truncate({ cascade: true })
+    .then(() => console.log('City table cleared after testing!'))
+  )
 })

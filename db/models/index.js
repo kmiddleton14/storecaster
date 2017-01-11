@@ -5,8 +5,9 @@
 // to get access to the User model.
 
 const User = require('./user')
+const WeatherExtra = require('./weatherextra')
 const City = require('./city')
 const Order = require('./order')
 const WeatherBase = require('./weatherbase')
 
-module.exports = {User, City, Order, WeatherBase}
+module.exports = {User, City, Order, WeatherBase, WeatherExtra}
