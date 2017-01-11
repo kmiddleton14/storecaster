@@ -10,9 +10,7 @@ describe('Review', () => {
     authorName: 'Susan McGee',
     title: 'Sun = fun',
     description: "The sun that I ordered was quite nice, round, and pleasant. and no i'm not talking about my husband",
-    rating: '5',
-    authorId: 3,
-    packageId: 4
+    rating: '5'
   }
 
   it('has all the expected property', () =>
@@ -22,8 +20,6 @@ describe('Review', () => {
         expect(Review.title).to.equal(exampleReview.title);
         expect(Review.description).to.equal(exampleReview.description);
         expect(Review.rating).to.equal(exampleReview.rating);
-        expect(Review.authorId).to.equal(exampleReview.authorId);
-        expect(Review.packageId).to.equal(exampleReview.packageId);
     })
   )
 
@@ -33,5 +29,25 @@ describe('Review', () => {
     review.validate()
       .then(result => expect(result.errors).to.exist)
   })
+
+  //TODO once associations are done we need to test the class method
+  // it('getRating classMethod returns the average rating for specific packageId', () => {
+  //   const package2;
+
+  //   beforeEach(() => {
+  //     package2 = Package.build({
+  //       authorName: 'Susan McGee',
+  //       title: 'Sun = fun',
+  //       description: "The thunderstorm was extremely disappointed, not as intense as I expected",
+  //       rating: '1'
+  //     });
+  //   });
+
+
+  //   let review = Review.build(exampleReview);
+  //   let review2 = Review.build(package2);
+  //   Review.create(exampleReview)
+  //     .then(result => expect(result.errors).to.exist)
+  // })
 
 })
