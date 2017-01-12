@@ -20,18 +20,18 @@ Package.belongsToMany(WeatherExtra, { through: 'packageextra' })
 WeatherExtra.belongsToMany(Package, { through: 'packageextra' })
 
 Package.belongsTo(WeatherBase, {as: 'base'})
-WeatherBase.hasMany(Package)
+WeatherBase.hasMany(Package, {foreignKey: 'base_id'})
 
 Review.belongsTo(Package, {as: 'package'})
-Package.hasMany(Review)
+Package.hasMany(Review, {foreignKey: 'package_id'})
 Review.belongsTo(User, {as: 'author'})
-User.hasMany(Review)
+User.hasMany(Review, {foreignKey: 'author_id'})
 
 Order.belongsToMany(Package, { through: 'orderpackage' })
 Package.belongsToMany(Order, { through: 'orderpackage' })
 
 Order.belongsTo(User, {as: 'user'})
-User.hasMany(Order)
+User.hasMany(Order, {foreignKey: 'user_id'})
 Order.belongsTo(City, {as: 'ship_city'})
 City.hasMany(Order, {foreignKey: 'ship_city_id'})
 //Order.belongsTo(Payment, {as: 'payment'})
