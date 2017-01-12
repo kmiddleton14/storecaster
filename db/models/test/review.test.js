@@ -1,7 +1,7 @@
 'use strict';
 
 const db = require('APP/db')
-const Review = require('APP/db/models/Review')
+const Review = db.models.review
 const {expect} = require('chai')
 
 describe('Review', () => {
