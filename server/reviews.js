@@ -10,8 +10,12 @@ module.exports = require('express').Router()
     Review.findAll()
     .then(reviews => res.json(reviews))
     .catch(next))
-  .get('/package/:id', (req, res, next) =>
-    Review.getReviewsByPackageId(req.params.id)
+  .get('/package/:packageId', (req, res, next) =>
+    Review.getByPackageId(req.params.packageId)
+    .then(reviews => res.json(reviews))
+    .catch(next))  
+  .get('/author/:authorId', (req, res, next) =>
+    Review.getByAuthorId(req.params.authorId)
     .then(reviews => res.json(reviews))
     .catch(next))
   .put('/:id', /*TODO: function to allow users to only update their own*/ (req, res, next) =>
