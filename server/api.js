@@ -10,6 +10,7 @@ api
   .use('/cities', require('./cities'))
   .use('/packages', require('./packages'))
   .use('/weatherbases', require('./weatherbases'))
+  .use('/weatherextras', require('./weatherextras'))
   .use('/reviews', require('./reviews'))
 
 
