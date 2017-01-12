@@ -10,31 +10,40 @@ module.exports = require('express').Router()
 		Package.findAll()
 		.then(packages => res.json(packages))
 		.catch(next))
-	.get('/:packageType', (req, res, next) => 
+	.get('/type/:packageType', (req, res, next) => 
 		Package.findAll({
 			where: {
-				packageType: req.params.packageType
+				packageType: req.params.packageType.toLowerCase()
 			}
 		})
 		.then(foundPackages => res.json(foundPackages))
 		.catch(next))
 	.get('/:id', (req, res, next) => 
-		Package.findById(req.params.id)
+		Package.findById(Number(req.params.id))
 		.then(foundPackage => res.json(foundPackage))
 		.catch(next))
-	.get('/:rating', (req, res, next) => 
-		Package.findAll({
-			where: { rating: req.params.rating }
-		})
-		.then(foundPackages => res.json(foundPackages))
-		.catch(next))
+
 	.post('/', /*forbidden('only admins can create a package'),*/ (req, res, next) =>
 		Package.create(req.body)
 		.then(createdPackage => res.status(201).json(createdPackage))
 		.catch(next))
+
+	.put('/:id', /*forbidden('only admins can create a base'),*/ (req, res, next) =>
+	    Package.findById(req.params.id)
+	    .then(foundPackage =>
+	      foundPackage.update(req.body)
+	    .then(updatedPackage => {
+	      res.status(202).send({
+	        package: updatedPackage,
+	        message: 'Updated successfully!'
+	      })
+	    })
+	    )
+	    .catch(next))
+
 	.delete('/:id', /*forbidden('only admins can create a city'),*/ (req, res, next) => 
 		Package.destroy({
-			where: { id: req.params.Package }
+			where: { id: Number(req.params.id) }
 		})
 		.then(foundPackage => res.json(foundPackage))
 		.catch(next))
