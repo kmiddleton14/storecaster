@@ -8,7 +8,9 @@ api
   .use('/auth', require('./auth'))
   .use('/users', require('./users'))
   .use('/cities', require('./cities'))
+  .use('/packages', require('./packages'))
   .use('/weatherbases', require('./weatherbases'))
+
 
 // Send along any errors
 api.use((err, req, res, next) => {

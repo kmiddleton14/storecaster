@@ -19,7 +19,7 @@ const Package = db.define('package', {
     }
   },
   packageType: {
-    type: Sequelize.ENUM('Template', 'Custom'),
+    type: Sequelize.ENUM('template', 'custom'),
     allowNull: false
   }
 })
