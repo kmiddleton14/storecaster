@@ -10,7 +10,7 @@ describe('package', () => {
     name: 'Sun with extra sparkle',
     description: 'A fun package for your vacation',
     imageURL: 'https://media.giphy.com/media/VxbvpfaTTo3le/giphy.gif',
-    packageType: 'Template'
+    packageType: 'template'
   }
 
   it('has all the expected properties', () =>
