@@ -12,6 +12,7 @@ api
   .use('/weatherbases', require('./weatherbases'))
   .use('/weatherextras', require('./weatherextras'))
   .use('/reviews', require('./reviews'))
+  .use('/orders', require('./orders'))
 
 
 // Send along any errors
