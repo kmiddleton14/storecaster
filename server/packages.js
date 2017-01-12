@@ -45,5 +45,5 @@ module.exports = require('express').Router()
 		Package.destroy({
 			where: { id: Number(req.params.id) }
 		})
-		.then(foundPackage => res.json(foundPackage))
+		.then(numRowsDestroyed => res.json(numRowsDestroyed))
 		.catch(next))
