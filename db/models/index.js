@@ -33,7 +33,7 @@ Package.belongsToMany(Order, { through: 'orderpackage' })
 Order.belongsTo(User, {as: 'user'})
 User.hasMany(Order)
 Order.belongsTo(City, {as: 'ship_city'})
-City.hasMany(Order)
+City.hasMany(Order, {foreignKey: 'ship_city_id'})
 //Order.belongsTo(Payment, {as: 'payment'})
 
 module.exports = {User, City, Order, WeatherBase, WeatherExtra, Package, Review, OrderPackage}
