@@ -49,5 +49,8 @@ describe('Review', () => {
   //   Review.create(exampleReview)
   //     .then(result => expect(result.errors).to.exist)
   // })
-
+  after(() => 
+    Review.truncate({ cascade: true })
+    .then(() => console.log('Review table cleared after testing!'))
+  )
 })

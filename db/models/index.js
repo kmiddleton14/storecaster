@@ -10,6 +10,30 @@ const Order = require('./order')
 const WeatherBase = require('./weatherbase')
 const WeatherExtra = require('./weatherextra')
 const Package = require('./package')
+const Review = require('./review')
+const OrderPackage = require('./orderpackage')
 
-module.exports = {User, City, Order, WeatherBase, WeatherExtra, Package}
+//associations
 
+//create pivot table called packageextra
+Package.belongsToMany(WeatherExtra, { through: 'packageextra' })
+WeatherExtra.belongsToMany(Package, { through: 'packageextra' })
+
+Package.belongsTo(WeatherBase, {as: 'base'})
+WeatherBase.hasMany(Package, {foreignKey: 'base_id'})
+
+Review.belongsTo(Package, {as: 'package'})
+Package.hasMany(Review, {foreignKey: 'package_id'})
+Review.belongsTo(User, {as: 'author'})
+User.hasMany(Review, {foreignKey: 'author_id'})
+
+Order.belongsToMany(Package, { through: 'orderpackage' })
+Package.belongsToMany(Order, { through: 'orderpackage' })
+
+Order.belongsTo(User, {as: 'user'})
+User.hasMany(Order, {foreignKey: 'user_id'})
+Order.belongsTo(City, {as: 'ship_city'})
+City.hasMany(Order, {foreignKey: 'ship_city_id'})
+//Order.belongsTo(Payment, {as: 'payment'})
+
+module.exports = {User, City, Order, WeatherBase, WeatherExtra, Package, Review, OrderPackage}
