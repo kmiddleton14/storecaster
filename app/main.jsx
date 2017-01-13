@@ -8,6 +8,9 @@ import store from './store'
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import Home from './components/Home'
+import Products from './components/Products'
+
+import { loadAllProducts } from './reducers/products'
 
 const App = connect(
   ({ auth }) => ({ user: auth })
@@ -21,12 +24,17 @@ const App = connect(
     </div>
 )
 
+const onProductsEnter = function (nextRouterState) {
+  store.getState().products.bases.length === 0 && store.dispatch(loadAllProducts());
+}
+
 render (
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRedirect to="/home" />
         <Route path="/home" component={Home} />
+        <Route path="/products" component={Products} onEnter={onProductsEnter}/>
       </Route>
     </Router>
   </Provider>,
