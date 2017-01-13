@@ -8,6 +8,7 @@ import store from './store'
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import Home from './components/Home'
+import Cart from './components/Cart'
 
 const App = connect(
   ({ auth }) => ({ user: auth })
@@ -27,6 +28,7 @@ render (
       <Route path="/" component={App}>
         <IndexRedirect to="/home" />
         <Route path="/home" component={Home} />
+        <Route path="/cart" component={Cart} />
       </Route>
     </Router>
   </Provider>,
