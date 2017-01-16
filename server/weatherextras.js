@@ -12,16 +12,13 @@ module.exports = require('express').Router()
     .catch(next))
   .put('/:id', /*forbidden('only admins can create a extra'),*/ (req, res, next) =>
     WeatherExtra.findById(req.params.id)
-    .then(foundExtra =>
-      foundExtra.update(req.body)
-    .then(updatedExtra => {
-      res.status(202).send({
-        weatherextra: updatedExtra,
-        message: 'Updated successfully!'
-      })
-    })
-    )
-    .catch(next))
+      .then(foundExtra => foundExtra.update(req.body))
+      .then(updatedExtra =>
+        res.status(202).send({
+          weatherextra: updatedExtra,
+          message: 'Updated successfully!'
+      }))
+      .catch(next))
   .post('/', /*forbidden('only admins can create a extra'),*/ (req, res, next) =>
     WeatherExtra.create(req.body)
     .then(extra => res.status(201).json(extra))

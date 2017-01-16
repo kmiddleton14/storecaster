@@ -20,15 +20,12 @@ module.exports = require('express').Router()
     .catch(next))
   .put('/:id', /*TODO: function to allow users to only update their own*/ (req, res, next) =>
     Review.findById(req.params.id)
-    .then(foundReview =>
-      foundReview.update(req.body)
-    .then(updatedReview => {
+    .then(foundReview => foundReview.update(req.body))
+    .then(updatedReview =>
       res.status(202).send({
         review: updatedReview,
         message: 'Updated successfully!'
-      })
-    })
-    )
+      }))
     .catch(err => console.log(err)))
   .post('/', (req, res, next) =>
     Review.create(req.body)
