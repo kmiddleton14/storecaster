@@ -6,7 +6,7 @@ import {connect, Provider} from 'react-redux'
 
 import store from './store'
 import Home from './components/Home'
-import Cart from './components/Cart'
+import Cart from './containers/CartContainer'
 import Products from './components/Products'
 import SelectedProduct from './components/SelectedProduct'
 import Navbar from './components/Navbar'
@@ -21,7 +21,8 @@ const App = connect(
     <div>
       <nav>
         <Navbar user={user}/>
-      </nav> 
+
+      </nav>
       {children}
     </div>
 )

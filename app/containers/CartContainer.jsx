@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
 import Cart from '../components/Cart';
 import { connect } from 'react-redux';
+import {browserHistory} from 'react-router';
+
+import {completeOrder} from 'APP/app/reducers/orders'
 
 //Need to add mapStateToProps?
   //Need to grab the selected package from the state
 
-const mapStateToProps = (dispatch) => {
+const mapStateToProps = (state) => {
   return {
-    selectedPackage: state.selectedPackage
-    //currentOrder: state.currentOrder
+    selectedPackage: state.products.selectedPackage,
+    currentOrder: state.orders.currentOrder
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    completeOrder (orderName) {
-      //TODO: add dispatcher for adding order
-      dispatch(completeOrder(orderName));
+    submitCompleteOrder (orderId, dateScheduled, user_id=null) {
+      dispatch(completeOrder(orderId, dateScheduled, user_id));
     }
   };
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(class extends Component {
 
@@ -67,13 +69,14 @@ export default connect(
   //TODO: change the handle submit function here
   handleSubmit (evt) {
     evt.preventDefault();
-    this.props.completeOrder(this.state);
+    this.props.submitCompleteOrder(this.props.currentOrder.id, this.state.startDateInputValue);
     this.setState({
       nameInputValue: '',
       cityInputValue: '',
       startDateInputValue: ''
       // dirty: false
     });
+    browserHistory.push('/confirmation');
   }
 
   calculatePrice() {
@@ -81,7 +84,7 @@ export default connect(
   }
 
   render () {
-    
+
     const nameInputValue = this.state.nameInputValue;
     const cityInputValue = this.state.cityInputValue;
     const startDateInputValue = this.state.startDateInputValue;
@@ -99,8 +102,10 @@ export default connect(
         nameInputValue={nameInputValue}
         cityInputValue={cityInputValue}
         startDateInputValue={startDateInputValue}
-        selectedPackage={this.state.selectedPackage}
+        selectedPackage={this.props.selectedPackage}
+        currentOrder={this.props.currentOrder}
         totalPrice={this.calculatePrice}
+        submitCompleteOrder={this.props.submitCompleteOrder}
       />
     );
   }
