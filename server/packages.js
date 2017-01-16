@@ -7,14 +7,17 @@ const {forbidden} = require('./auth.filters')
 
 module.exports = require('express').Router()
 	.get('/', (req, res, next) => 
-		Package.findAll()
+		Package.findAll({
+			include: [{ all: true }]
+		})
 		.then(packages => res.json(packages))
 		.catch(next))
 	.get('/type/:packageType', (req, res, next) => 
 		Package.findAll({
 			where: {
 				packageType: req.params.packageType.toLowerCase()
-			}
+			},
+			include: [{ all: true }]
 		})
 		.then(foundPackages => res.json(foundPackages))
 		.catch(next))

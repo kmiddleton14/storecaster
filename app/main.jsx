@@ -5,11 +5,12 @@ import {render} from 'react-dom'
 import {connect, Provider} from 'react-redux'
 
 import store from './store'
-import Login from './components/Login'
-import WhoAmI from './components/WhoAmI'
 import Home from './components/Home'
 import Cart from './components/Cart'
 import Products from './components/Products'
+import SelectedProduct from './components/SelectedProduct'
+import Navbar from './components/Navbar'
+import Confirmation from './components/Confirmation'
 
 import { loadAllProducts } from './reducers/products'
 
@@ -19,8 +20,8 @@ const App = connect(
   ({ user, children }) =>
     <div>
       <nav>
-        {user ? <WhoAmI/> : <Login/>}
-      </nav>
+        <Navbar user={user}/>
+      </nav> 
       {children}
     </div>
 )
@@ -37,6 +38,8 @@ render (
         <Route path="/home" component={Home} />
         <Route path="/cart" component={Cart} />
         <Route path="/products" component={Products} onEnter={onProductsEnter}/>
+        <Route path="/selectedproduct" component={SelectedProduct}/>
+        <Route path="/confirmation" component={Confirmation} />
       </Route>
     </Router>
   </Provider>,

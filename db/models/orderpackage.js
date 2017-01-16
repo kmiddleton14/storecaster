@@ -7,7 +7,7 @@ const OrderPackage = db.define('orderpackage', {
   
   dateScheduled: {
     type: Sequelize.DATEONLY,
-    allowNull: false
+    // allowNull: false
   }
 })
 

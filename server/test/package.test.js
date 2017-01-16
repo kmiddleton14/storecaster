@@ -32,12 +32,13 @@ describe('/api/packages', () => {
     it('GET / returns all packages', () =>
       request(app)
         .get(`/api/packages`)
-        .then(res => {
-          
+        .then(res => {          
           expect(res.status).to.equal(200)
           expect(res.body).to.be.an('array')
           expect(res.body[0]).to.include.keys('name');
           expect(res.body[0]).to.have.property('name', 'Sun with extra sparkle');
+          //checks to see whether eager loading worked for base, reviews, extras, and orders
+          expect(res.body[0]).to.include.keys('base', 'weatherextras', 'reviews', 'orders');
         })
     )
 
@@ -49,6 +50,8 @@ describe('/api/packages', () => {
           expect(res.body).to.be.an('array')
           expect(res.body[0]).to.include.keys('name');
           expect(res.body[0]).to.have.property('name', 'The ultimate thunderstorm');
+          //checks to see whether eager loading worked for base, reviews, extras, and orders
+          expect(res.body[0]).to.include.keys('base', 'weatherextras', 'reviews', 'orders');
         })
     )
 

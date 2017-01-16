@@ -98,15 +98,29 @@ describe('/api/orders', () => {
         .post('/api/orders')
         .send({
           order: {
+            id: 3007,
             user_id: userId,
             totalPrice: 350.00,
             status: 'Created',
-            ship_city_id: cityId
+            // ship_city_id: cityId
           },
           package_id: packageId,
-          dateScheduled: '2017-09-18'
+          // dateScheduled: '2017-09-18'
         })
         .expect(201)
+        .expect(function(res) {
+          console.log(res.body)
+          expect(res.body).to.be.an('object');
+          expect(res.body.order_id).to.equal(3007);
+          expect(res.body.package_id).to.equal(packageId);
+
+          //Checks to see if order has been eagerly loaded
+          expect(res.body.order.id).to.equal(3007);
+          expect(res.body.order.status).to.equal('Created');
+
+          //Checks to see if Package has been eagerly loaded
+          expect(res.body.package.id).to.equal(packageId);
+        })
     )
 
     it('DELETE deletes a order', () =>
