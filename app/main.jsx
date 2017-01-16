@@ -9,6 +9,7 @@ import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import Home from './components/Home'
 import Products from './components/Products'
+import Confirmation from './components/Confirmation'
 
 import { loadAllProducts } from './reducers/products'
 
@@ -35,6 +36,7 @@ render (
         <IndexRedirect to="/home" />
         <Route path="/home" component={Home} />
         <Route path="/products" component={Products} onEnter={onProductsEnter}/>
+        <Route path="/confirmation" component={Confirmation} />
       </Route>
     </Router>
   </Provider>,
