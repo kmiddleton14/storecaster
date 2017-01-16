@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
+import DatePicker from 'react-datepicker';
+
+
+//pubrequire('react-datepicker/dist/react-datepicker.css');
 
 export default function (props) {
   //TODO: Implement loop to create all products from passed in orders
@@ -54,13 +58,13 @@ export default function (props) {
           </div>
           <div>
             <label>Weather Start Date:</label>
-            <div>
-              <input
-                type="text"
-                onChange={handleDateChange}
-                value={startDateInputValue}
-              />
-            </div>
+            <DatePicker
+              dateFormat="MM/DD/YYYY"
+              placeholderText="Click to select a date"
+              todayButton={"Today"}
+              selected={startDateInputValue}
+              onChange={handleDateChange}
+            />
           </div>
         </fieldset>
         <h3>Your Total: {totalPrice}</h3>

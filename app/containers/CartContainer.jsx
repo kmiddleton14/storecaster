@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Cart from '../components/Cart';
 import { connect } from 'react-redux';
 import {browserHistory} from 'react-router';
+import moment from 'moment';
 
 import {completeOrder} from 'APP/app/reducers/orders'
 
@@ -33,7 +34,7 @@ export default connect(
     this.state = {
       nameInputValue: '',
       cityInputValue: '',
-      startDateInputValue: ''
+      startDateInputValue: moment()
       // dirty: false
     };
 
@@ -59,10 +60,9 @@ export default connect(
     });
   }
 
-  handleDateChange (evt) {
-    const value = evt.target.value;
+  handleDateChange (moment) {
     this.setState({
-      startDateInputValue: value
+      startDateInputValue: moment
       // dirty: true
     });
   }
