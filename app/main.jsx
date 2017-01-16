@@ -10,6 +10,7 @@ import WhoAmI from './components/WhoAmI'
 import Home from './components/Home'
 import Products from './components/Products'
 import SelectedProduct from './components/SelectedProduct'
+import Confirmation from './components/Confirmation'
 
 import { loadAllProducts } from './reducers/products'
 
@@ -37,6 +38,7 @@ render (
         <Route path="/home" component={Home} />
         <Route path="/products" component={Products} onEnter={onProductsEnter}/>
         <Route path="/selectedproduct" component={SelectedProduct}/>
+        <Route path="/confirmation" component={Confirmation} />
       </Route>
     </Router>
   </Provider>,
