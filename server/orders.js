@@ -40,27 +40,45 @@ module.exports = require('express').Router()
     })
     )
     .catch(err => console.log(err)))
-  .post('/', (req, res, next) =>
+
+  //update the date scheduled for orderpackage table
+  .put('/orderpackage/:orderId', (req, res, next) =>
+    OrderPackage.findById(req.params.orderId)
+    .then(foundOrder =>
+      foundOrder.update(req.body)
+    .then(updatedOrder => {
+      res.status(202).send({
+        order: updatedOrder,
+        message: 'Updated successfully!'
+      })
+    })
+    )
+    .catch(err => console.log(err)))
+  .post('/', (req, res, next) => {
     Order.create(req.body.order)
     .then(createdOrder => {
-      OrderPackage.create({
+      // console.dir(createdOrder)
+      return OrderPackage.create({
         order_id: createdOrder.id,
         package_id: req.body.package_id,
-        dateScheduled: req.body.dateScheduled
+        //dateScheduled: req.body.dateScheduled
       })
+      .catch(console.error)
       .then( newOrderPackage => {
-        Order.findById(createdOrder.id, {
-          include: [{
-            model: OrderPackage,
-            where: { order_id: createdOrder.id }
-          }]
+        // console.log(newOrderPackage);
+        return OrderPackage.findOne({
+          where: {
+            order_id: createdOrder.id
+          },
+          include: [{ all: true }],
         })
       })
       .then(fullOrderInfo => {
         res.status(201).json(fullOrderInfo)
       })
+      .catch(next)
     })
-    .catch(next))
+  })
   .delete('/:id', /*TODO: only allow user to delete own order, or admin can delete all*/ (req, res, next) =>
     Order.destroy({
       where: { id: req.params.id }

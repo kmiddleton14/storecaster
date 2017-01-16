@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 export default function (props) {
   //TODO: Implement loop to create all products from passed in orders
 
+
+
   const selectedPackage = props.selectedPackage;
   const totalPrice = props.calculatePrice;
   const handleSubmit = props.handleSubmit;
@@ -31,7 +33,7 @@ export default function (props) {
       <h3>Review your cart before checkout</h3>
 
       <div>
-        <img src={selectedPackage.imgURL} />
+        <img src={selectedPackage.imageURL} />
         <h3>{selectedPackage.name}</h3>
         <h4>Package Description: {selectedPackage.description}</h4>
       </div>

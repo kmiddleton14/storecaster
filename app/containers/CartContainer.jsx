@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 //Need to add mapStateToProps?
   //Need to grab the selected package from the state
 
-const mapStateToProps = (dispatch) => {
+const mapStateToProps = (state) => {
   return {
-    selectedPackage: state.selectedPackage
-    //currentOrder: state.currentOrder
+    selectedPackage: state.products.selectedPackage,
+    currentOrder: state.orders.currentOrder
   }
 }
 
@@ -22,7 +22,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(class extends Component {
 
@@ -81,7 +81,7 @@ export default connect(
   }
 
   render () {
-    
+
     const nameInputValue = this.state.nameInputValue;
     const cityInputValue = this.state.cityInputValue;
     const startDateInputValue = this.state.startDateInputValue;
@@ -89,7 +89,7 @@ export default connect(
 
     // if (!inputValue && dirty) warning = 'You must enter a name';
     // else if (inputValue.length > 16) warning = 'Name must be less than 16 characters';
-
+    console.log("These are the props", this.props);
     return (
       <Cart
         handleNameChange={this.handleNameChange}
@@ -99,7 +99,8 @@ export default connect(
         nameInputValue={nameInputValue}
         cityInputValue={cityInputValue}
         startDateInputValue={startDateInputValue}
-        selectedPackage={this.state.selectedPackage}
+        selectedPackage={this.props.selectedPackage}
+        currentOrder={this.props.currentOrder}
         totalPrice={this.calculatePrice}
       />
     );
