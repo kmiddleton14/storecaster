@@ -54,7 +54,7 @@ module.exports = require('express').Router()
     })
     )
     .catch(err => console.log(err)))
-  .post('/', (req, res, next) =>
+  .post('/', (req, res, next) => {
     Order.create(req.body.order)
     .then(createdOrder => {
       // console.dir(createdOrder)
@@ -76,8 +76,8 @@ module.exports = require('express').Router()
       .then(fullOrderInfo => {
         res.status(201).json(fullOrderInfo)
       })
+      .catch(next)
     })
-    .catch(next)
   })
   .delete('/:id', /*TODO: only allow user to delete own order, or admin can delete all*/ (req, res, next) =>
     Order.destroy({
