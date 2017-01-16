@@ -63,6 +63,7 @@ module.exports = require('express').Router()
         package_id: req.body.package_id,
         //dateScheduled: req.body.dateScheduled
       })
+      .catch(console.error)
       .then( newOrderPackage => {
         // console.log(newOrderPackage);
         return OrderPackage.findOne({
@@ -75,6 +76,7 @@ module.exports = require('express').Router()
       .then(fullOrderInfo => {
         res.status(201).json(fullOrderInfo)
       })
+      .catch(next)
     })
   })
   .delete('/:id', /*TODO: only allow user to delete own order, or admin can delete all*/ (req, res, next) =>
