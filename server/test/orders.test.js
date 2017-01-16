@@ -57,7 +57,7 @@ describe('/api/orders', () => {
   )
 
   describe('orders api routes', () => {
-    xit('GET / returns all orders', () =>
+    it('GET / returns all orders', () =>
       request(app)
         .get(`/api/orders`)
         .then(res => {
@@ -68,7 +68,7 @@ describe('/api/orders', () => {
         })
     )
 
-    xit('GET /user/:userId returns all orders by user_id', () =>
+    it('GET /user/:userId returns all orders by user_id', () =>
       request(app)
         .get(`/api/orders/user/${userId}`)
         .then(res => {
@@ -79,7 +79,7 @@ describe('/api/orders', () => {
         })
     )
 
-    xit('PUT updates an order', () =>
+    it('PUT updates an order', () =>
       request(app)
         .put('/api/orders/2')
         .send({
@@ -123,7 +123,7 @@ describe('/api/orders', () => {
         })
     )
 
-    xit('DELETE deletes a order', () =>
+    it('DELETE deletes a order', () =>
       request(app)
         .delete('/api/orders/2')
         .then(res => {

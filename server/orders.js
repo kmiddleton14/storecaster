@@ -50,6 +50,7 @@ module.exports = require('express').Router()
         package_id: req.body.package_id,
         //dateScheduled: req.body.dateScheduled
       })
+      .catch(console.error)
       .then( newOrderPackage => {
         // console.log(newOrderPackage);
         return OrderPackage.findOne({
