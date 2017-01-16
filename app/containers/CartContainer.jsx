@@ -5,11 +5,18 @@ import { connect } from 'react-redux';
 //Need to add mapStateToProps?
   //Need to grab the selected package from the state
 
+const mapStateToProps = (dispatch) => {
+  return {
+    selectedPackage: state.selectedPackage
+    //currentOrder: state.currentOrder
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return {
-    addNewOrder (orderName) {
+    completeOrder (orderName) {
       //TODO: add dispatcher for adding order
-      dispatch(addOrder(orderName));
+      dispatch(completeOrder(orderName));
     }
   };
 };
@@ -28,7 +35,9 @@ export default connect(
       // dirty: false
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleCityChange = this.handleCityChange.bind(this);
+    this.handleDateChange = this.handleDateChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -58,7 +67,7 @@ export default connect(
   //TODO: change the handle submit function here
   handleSubmit (evt) {
     evt.preventDefault();
-    this.props.addNewOrder(this.state.inputValue);
+    this.props.completeOrder(this.state);
     this.setState({
       nameInputValue: '',
       cityInputValue: '',
@@ -72,7 +81,7 @@ export default connect(
   }
 
   render () {
-    const dirty = this.state.dirty;
+    
     const nameInputValue = this.state.nameInputValue;
     const cityInputValue = this.state.cityInputValue;
     const startDateInputValue = this.state.startDateInputValue;
@@ -92,7 +101,6 @@ export default connect(
         startDateInputValue={startDateInputValue}
         selectedPackage={this.state.selectedPackage}
         totalPrice={this.calculatePrice}
-        // warning={warning}
       />
     );
   }
