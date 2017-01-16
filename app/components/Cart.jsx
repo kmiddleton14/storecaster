@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router';
 
 export default function (props) {
   //TODO: Implement loop to create all products from passed in orders
@@ -16,16 +17,6 @@ export default function (props) {
   const nameInputValue = props.nameInputValue;
   const cityInputValue = props.cityInputValue;
   const startDateInputValue = props.startDateInputValue;
-
-  // const selectedPackage = {
-  //   imgURL: 'http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg',
-  //   name: 'Raining Kitten Package',
-  //   description: 'The happiest rain ever'
-  // };
-  // const totalPrice = '$120.00';
-  // const handleChange = function () {}
-  // const handleSubmit = function () {}
-  // const inputValue = function () {}
 
   return (
     <div >
@@ -72,10 +63,10 @@ export default function (props) {
             </div>
           </div>
         </fieldset>
+        <h3>Your Total: {totalPrice}</h3>
+        <button type="submit">Purchase</button>
       </form>
 
-      <h3>Your Total: {totalPrice}</h3>
-      <button>Purchase</button>
     </div>
   )
 }
