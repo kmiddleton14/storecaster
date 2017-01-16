@@ -40,6 +40,20 @@ module.exports = require('express').Router()
     })
     )
     .catch(err => console.log(err)))
+
+  //update the date scheduled for orderpackage table
+  .put('/orderpackage/:orderId', (req, res, next) =>
+    OrderPackage.findById(req.params.orderId)
+    .then(foundOrder =>
+      foundOrder.update(req.body)
+    .then(updatedOrder => {
+      res.status(202).send({
+        order: updatedOrder,
+        message: 'Updated successfully!'
+      })
+    })
+    )
+    .catch(err => console.log(err)))
   .post('/', (req, res, next) =>
     Order.create(req.body.order)
     .then(createdOrder => {
