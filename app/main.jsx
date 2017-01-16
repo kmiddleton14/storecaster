@@ -5,10 +5,11 @@ import {render} from 'react-dom'
 import {connect, Provider} from 'react-redux'
 
 import store from './store'
-import Login from './components/Login'
-import WhoAmI from './components/WhoAmI'
+
+
 import Home from './components/Home'
 import Products from './components/Products'
+import Navbar from './components/Navbar'
 
 import { loadAllProducts } from './reducers/products'
 
@@ -18,7 +19,8 @@ const App = connect(
   ({ user, children }) =>
     <div>
       <nav>
-        {user ? <WhoAmI/> : <Login/>}
+        
+        <Navbar user={user}/>
       </nav> 
       {children}
     </div>
