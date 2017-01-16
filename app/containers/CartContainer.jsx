@@ -38,7 +38,20 @@ export default connect(
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleCityChange = this.handleCityChange.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange = field => evt => {
+    const value = evt.target.value
+
+    // Equivalent to:
+    //
+    // const newState = {}
+    // newState[`${field}InputValue`] = value
+    // this.setState(newState)
+
+    this.setState({
+      [`${field}InputValue`]: value
+    })
   }
 
   handleNameChange (evt) {
@@ -64,8 +77,9 @@ export default connect(
       // dirty: true
     });
   }
+
   //TODO: change the handle submit function here
-  handleSubmit (evt) {
+  handleSubmit = evt => {
     evt.preventDefault();
     this.props.completeOrder(this.state);
     this.setState({
@@ -92,8 +106,8 @@ export default connect(
 
     return (
       <Cart
-        handleNameChange={this.handleNameChange}
-        handleCityChange={this.handleCityChange}
+        handleNameChange={this.handleChange('name')}
+        handleCityChange={this.handleChange('city')}
         handleDateChange={this.handleDateChange}
         handleSubmit={this.handleSubmit}
         nameInputValue={nameInputValue}
