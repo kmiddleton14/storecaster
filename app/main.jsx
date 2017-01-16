@@ -5,10 +5,9 @@ import {render} from 'react-dom'
 import {connect, Provider} from 'react-redux'
 
 import store from './store'
-
-
 import Home from './components/Home'
 import Products from './components/Products'
+import SelectedProduct from './components/SelectedProduct'
 import Navbar from './components/Navbar'
 import Confirmation from './components/Confirmation'
 
@@ -20,7 +19,6 @@ const App = connect(
   ({ user, children }) =>
     <div>
       <nav>
-        
         <Navbar user={user}/>
       </nav> 
       {children}
@@ -38,6 +36,7 @@ render (
         <IndexRedirect to="/home" />
         <Route path="/home" component={Home} />
         <Route path="/products" component={Products} onEnter={onProductsEnter}/>
+        <Route path="/selectedproduct" component={SelectedProduct}/>
         <Route path="/confirmation" component={Confirmation} />
       </Route>
     </Router>
