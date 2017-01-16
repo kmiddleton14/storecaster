@@ -1,170 +1,76 @@
-module.exports = [
-    {
-        "name": "Fresh Breeze",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "94.58",
-        "imageURL": "https://media2.giphy.com/media/aCYNsq7uUL8o8/giphy.gif"
-    },
-    {
-        "name": "Tornado",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "86.24",
-        "imageURL": "https://media3.giphy.com/media/NOMfFFdRLJBQI/giphy.gif"
-    },
-    {
-        "name": "Tornado",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "83.50",
-        "imageURL": "https://media3.giphy.com/media/NOMfFFdRLJBQI/giphy.gif"
-    },
-    {
-        "name": "Mist",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "124.19",
-        "imageURL": "https://media3.giphy.com/media/3oEjHZCXlU7LM8BXLq/giphy.gif"
-    },
-    {
-        "name": "Squalls",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "135.87",
-        "imageURL": "https://media4.giphy.com/media/GwYpjYVx31u5a/giphy.gif"
-    },
-    {
-        "name": "Haze",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "145.62",
-        "imageURL": "https://media2.giphy.com/media/PksBbK3epRHa0/giphy.gif"
-    },
-    {
-        "name": "Sand",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "125.54",
-        "imageURL": "https://media4.giphy.com/media/6njDpeHPilm7u/giphy.gif"
-    },
-    {
-        "name": "Strong Breeze",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "93.56",
-        "imageURL": "https://media2.giphy.com/media/aCYNsq7uUL8o8/giphy.gif"
-    },
-    {
-        "name": "Hot",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "104.01",
-        "imageURL": "https://media4.giphy.com/media/xT0wlvGLHmojbeu5vq/giphy.gif"
-    },
-    {
-        "name": "Violent Storm",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "70.03",
-        "imageURL": "https://media3.giphy.com/media/rsdDNSViCq8OQ/giphy.gif"
-    },
-    {
-        "name": "Sand, Dust Whirls",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "135.21",
-        "imageURL": "https://media2.giphy.com/media/I2pYGLyVOvBmg/giphy.gif"
-    },
-    {
-        "name": "Windy",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "107.45",
-        "imageURL": "https://media1.giphy.com/media/oRnJs9iEjJELS/giphy.gif"
-    },
-    {
-        "name": "Calm",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "54.02",
-        "imageURL": "https://media0.giphy.com/media/6PLy4E0Is4piw/giphy.gif"
-    },
-    {
-        "name": "Moderate Breeze",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "134.94",
-        "imageURL": "https://media2.giphy.com/media/aCYNsq7uUL8o8/giphy.gif"
-    },
-    {
-        "name": "Volcanic Ash",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "92.74",
-        "imageURL": "https://media1.giphy.com/media/BNMaauKfbxxC0/giphy.gif"
-    },
-    {
-        "name": "Dust",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "61.95",
-        "imageURL": "https://media1.giphy.com/media/wWY8gd50Yrg4w/giphy.gif"
-    },
-    {
-        "name": "Gentle Breeze",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "123.19",
-        "imageURL": "https://media2.giphy.com/media/nAKy6Ht1sH1wQ/giphy.gif"
-    },
-    {
-        "name": "Cold",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "145.83",
-        "imageURL": "https://media3.giphy.com/media/LyZBOj918MvIY/giphy.gif"
-    },
-    {
-        "name": "Light Breeze",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "61.52",
-        "imageURL": "https://media3.giphy.com/media/kXPhYoRv1SQuI/giphy.gif"
-    },
-    {
-        "name": "Tropical Storm",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "98.92",
-        "imageURL": "https://media3.giphy.com/media/7gHGe5y5EYwuY/giphy.gif"
-    },
-    {
-        "name": "Hail",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "57.37",
-        "imageURL": "https://media4.giphy.com/media/MlUj889pjdYFW/giphy.gif"
-    },
-    {
-        "name": "Smoke",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "115.93",
-        "imageURL": "https://media0.giphy.com/media/N1sstETws5c1W/giphy.gif"
-    },
-    {
-        "name": "Fog",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "87.54",
-        "imageURL": "https://media0.giphy.com/media/a9A8loj9dbc76/giphy.gif"
-    },
-    {
-        "name": "Severe Gale",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "105.40",
-        "imageURL": "https://media3.giphy.com/media/guxnsehNfPa1y/giphy.gif"
-    },
-    {
-        "name": "Storm",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "84.23",
-        "imageURL": "https://media0.giphy.com/media/xT9GEDhzERbjDD15O8/giphy.gif"
-    },
-    {
-        "name": "Gale",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "127.51",
-        "imageURL": "https://media3.giphy.com/media/11gCjI7aajtlDO/giphy.gif"
-    },
-    {
-        "name": "Hurricane",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "58.76",
-        "imageURL": "https://media1.giphy.com/media/7HjCZ9kWwYtG/giphy.gif"
-    },
-    {
-        "name": "Hurricane",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "132.09",
-        "imageURL": "https://media1.giphy.com/media/7HjCZ9kWwYtG/giphy.gif"
-    }
-]
+module.exports = [ { name: 'Severe Gale',
+    description: 'A placeholder description for weather extra',
+    basePrice: '105.40',
+    imageURL: 'http://www.jpl.nasa.gov/images/msl/20161213/pia21255-16.gif' },
+  { name: 'Hurricane',
+    description: 'A placeholder description for weather extra',
+    basePrice: '132.09',
+    imageURL: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Hurricane_Ivan_NEXRAD_radar_animation.gif' },
+  { name: 'Windy',
+    description: 'A placeholder description for weather extra',
+    basePrice: '107.45',
+    imageURL: 'https://s-media-cache-ak0.pinimg.com/originals/bf/1a/c2/bf1ac25ddec9713195bfde0372caea31.gif' },
+  { name: 'Mist',
+    description: 'A placeholder description for weather extra',
+    basePrice: '124.19',
+    imageURL: 'http://scijinks.jpl.nasa.gov/review/weather-tricktionary/anemometer.gif' },
+  { name: 'Hail',
+    description: 'A placeholder description for weather extra',
+    basePrice: '57.37',
+    imageURL: 'http://84.235.53.16/weather/radar/oehl/20110331_055754_dBZHail.gif' },
+  { name: 'Moderate Breeze',
+    description: 'A placeholder description for weather extra',
+    basePrice: '134.94',
+    imageURL: 'https://upload.wikimedia.org/wikipedia/commons/7/76/PIA02863_-_Jupiter_surface_motion_animation.gif' },
+  { name: 'Light Breeze',
+    description: 'A placeholder description for weather extra',
+    basePrice: '61.52',
+    imageURL: 'http://apps.startribune.com/blogs/user_images/pauldouglas_1481114572_mn%20simu.gif' },
+  { name: 'Tornado',
+    description: 'A placeholder description for weather extra',
+    basePrice: '86.24',
+    imageURL: 'http://www.crh.noaa.gov/images/ilx/events/12mar06/ilx-radar.gif' },
+  { name: 'Squalls',
+    description: 'A placeholder description for weather extra',
+    basePrice: '135.87',
+    imageURL: 'http://www.australianweathernews.com/images/wxcode1.gif' },
+  { name: 'Sand',
+    description: 'A placeholder description for weather extra',
+    basePrice: '125.54',
+    imageURL: 'http://3.bp.blogspot.com/-zmInnjB26hY/VoQtXM1kfdI/AAAAAAAAFqM/iz1t8q7kisc/s1600/Baba-Yaga-Out.gif' },
+  { name: 'Fog',
+    description: 'A placeholder description for weather extra',
+    basePrice: '87.54',
+    imageURL: 'http://www.nofogusa.com/2014%20NO-FOG%20Logo-Gif.gif' },
+  { name: 'Gentle Breeze',
+    description: 'A placeholder description for weather extra',
+    basePrice: '123.19',
+    imageURL: 'http://4.bp.blogspot.com/_R8xVtHAV1lc/S9j_nkU_WaI/AAAAAAAAHyU/xPEEjwsYT1Q/s1600/nam_pcp_072l.gif' },
+  { name: 'Violent Storm',
+    description: 'A placeholder description for weather extra',
+    basePrice: '70.03',
+    imageURL: 'http://earthfirstjournal.org/newswire/wp-content/uploads/sites/3/2014/07/named-hurricane-fran.gif' },
+  { name: 'Tornado',
+    description: 'A placeholder description for weather extra',
+    basePrice: '83.50',
+    imageURL: 'https://upload.wikimedia.org/wikipedia/commons/3/38/Denning_tornado_animation.gif' },
+  { name: 'Fresh Breeze',
+    description: 'A placeholder description for weather extra',
+    basePrice: '94.58',
+    imageURL: 'https://apps.sfwmd.gov/sfwmd/common/images/weather/noaaport/radar_amx_anim.gif' },
+  { name: 'Smoke',
+    description: 'A placeholder description for weather extra',
+    basePrice: '115.93',
+    imageURL: 'https://i.redd.it/696kd4pcquxx.gif' },
+  { name: 'Volcanic Ash',
+    description: 'A placeholder description for weather extra',
+    basePrice: '92.74',
+    imageURL: 'http://1.bp.blogspot.com/-PqPmQ5-_Kcg/Ve40parPwOI/AAAAAAAAy0s/F0s-h4FGjts/s1600/20150907_%252B48WW_LATEST.gif' },
+  { name: 'Gale',
+    description: 'A placeholder description for weather extra',
+    basePrice: '127.51',
+    imageURL: 'http://www.meteoalarm.eu/maps/FI-160702-x800.gif' },
+  { name: 'Hurricane',
+    description: 'A placeholder description for weather extra',
+    basePrice: '58.76',
+    imageURL: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Hurricane_Ike_NEXRAD_radar_animation.gif' } ]

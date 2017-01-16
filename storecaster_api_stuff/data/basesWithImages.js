@@ -1,219 +1,110 @@
-module.exports = [
-    {
-        "category": "Rainy",
-        "name": "Thunderstorm with Light Drizzle",
-        "description": "A placeholder description for weather base",
-        "basePrice": "755.53",
-        "imageURL": "https://s-media-cache-ak0.pinimg.com/originals/bf/f5/d0/bff5d03a2b2ad8814abfedffadfd203d.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Thunderstorm with Heavy Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "414.99",
-        "imageURL": "https://media2.giphy.com/media/10iOWNaaav0kz6/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Ragged Thunderstorm",
-        "description": "A placeholder description for weather base",
-        "basePrice": "741.21",
-        "imageURL": "https://media0.giphy.com/media/kwpa0M7OAoYFy/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Light Intensity Drizzle",
-        "description": "A placeholder description for weather base",
-        "basePrice": "591.42",
-        "imageURL": "https://media2.giphy.com/media/YW8H1EE8KkqKQ/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Thunderstorm with Heavy Drizzle",
-        "description": "A placeholder description for weather base",
-        "basePrice": "901.51",
-        "imageURL": "https://media2.giphy.com/media/YW8H1EE8KkqKQ/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Thunderstorm",
-        "description": "A placeholder description for weather base",
-        "basePrice": "987.19",
-        "imageURL": "https://media0.giphy.com/media/JMqXTYyXytmSY/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Shower Rain and Drizzle",
-        "description": "A placeholder description for weather base",
-        "basePrice": "840.80",
-        "imageURL": "https://media4.giphy.com/media/D6eipslZLI4nK/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Drizzle Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "109.78",
-        "imageURL": "https://media4.giphy.com/media/D6eipslZLI4nK/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Freezing Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "430.07",
-        "imageURL": "https://media2.giphy.com/media/1JaTB2ID367QI/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Heavy Intensity Drizzle Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "241.52",
-        "imageURL": "https://media4.giphy.com/media/D6eipslZLI4nK/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Very Heavy Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "394.08",
-        "imageURL": "https://media3.giphy.com/media/rL7NyEayvA43C/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Thunderstorm with Drizzle",
-        "description": "A placeholder description for weather base",
-        "basePrice": "213.54",
-        "imageURL": "https://media4.giphy.com/media/D6eipslZLI4nK/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Heavy Intensity Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "713.45",
-        "imageURL": "https://media2.giphy.com/media/4EzpelBlBdM9a/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Heavy Thunderstorm",
-        "description": "A placeholder description for weather base",
-        "basePrice": "672.02",
-        "imageURL": "https://media2.giphy.com/media/MZzqL3WFiWfHG/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Thunderstorm with Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "973.32",
-        "imageURL": "https://media0.giphy.com/media/DOzhRL0uLJrGw/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Extreme Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "119.82",
-        "imageURL": "https://media2.giphy.com/media/83IyKIu0aeJri/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Drizzle",
-        "description": "A placeholder description for weather base",
-        "basePrice": "873.54",
-        "imageURL": "https://media4.giphy.com/media/D6eipslZLI4nK/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Shower Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "772.89",
-        "imageURL": "https://media4.giphy.com/media/NGO7uB2BwILOE/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Heavy Intensity Shower Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "431.17",
-        "imageURL": "https://media4.giphy.com/media/NGO7uB2BwILOE/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Moderate Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "149.31",
-        "imageURL": "https://media2.giphy.com/media/k9Mqf3k8BFlcY/giphy.gif"
-    },
-    {
-        "category": "Snowy",
-        "name": "Snow",
-        "description": "A placeholder description for weather base",
-        "basePrice": "850.51",
-        "imageURL": "https://media4.giphy.com/media/26yxK7vLN1ZBff71e/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Light Thunderstorm",
-        "description": "A placeholder description for weather base",
-        "basePrice": "949.03",
-        "imageURL": "https://media3.giphy.com/media/a2rTXimMF1JKw/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Light Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "523.06",
-        "imageURL": "https://media1.giphy.com/media/nizGhDttUFI4/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Thunderstorm with Light Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "116.67",
-        "imageURL": "https://media3.giphy.com/media/nizGhDttUFI4/giphy.gif"
-    },
-    {
-        "category": "Snowy",
-        "name": "Shower Sleet",
-        "description": "A placeholder description for weather base",
-        "basePrice": "291.98",
-        "imageURL": "https://media2.giphy.com/media/fxgJ0xeP8Y372/giphy.gif"
-    },
-    {
-        "category": "Sunny",
-        "name": "Clear Sky",
-        "description": "A placeholder description for weather base",
-        "basePrice": "643.73",
-        "imageURL": "https://media4.giphy.com/media/Fz7SI7KHDGdJC/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Ragged Shower Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "736.82",
-        "imageURL": "https://media0.giphy.com/media/wMVsmUmlVomFa/giphy.gif"
-    },
-    {
-        "category": "Snowy",
-        "name": "Rain and Snow",
-        "description": "A placeholder description for weather base",
-        "basePrice": "466.91",
-        "imageURL": "https://media1.giphy.com/media/l41Yq6xnFirZUUDv2/giphy.gif"
-    },
-    {
-        "category": "Cloudy",
-        "name": "Broken Clouds",
-        "description": "A placeholder description for weather base",
-        "basePrice": "397.10",
-        "imageURL": "https://media3.giphy.com/media/rsdDNSViCq8OQ/giphy.gif"
-    },
-    {
-        "category": "Rainy",
-        "name": "Light Intensity Shower Rain",
-        "description": "A placeholder description for weather base",
-        "basePrice": "827.19",
-        "imageURL": "https://media4.giphy.com/media/NGO7uB2BwILOE/giphy.gif"
-    },
-    {
-        "category": "Cloudy",
-        "name": "",
-        "description": "A placeholder description for weather base",
-        "basePrice": "892.67",
-        "imageURL": "https://media1.giphy.com/media/11hgDsVhGh36Le/giphy.gif"
-    }
-]
+module.exports = [ { category: 'Rainy',
+    name: 'Drizzle Rain',
+    description: 'A placeholder description for weather base',
+    basePrice: '109.78',
+    imageURL: 'http://www.gifart.net/public/media/175/e9dba6b733820568808dba908c0a3671.gif' },
+  { category: 'Rainy',
+    name: 'Thunderstorm with Light Drizzle',
+    description: 'A placeholder description for weather base',
+    basePrice: '755.53',
+    imageURL: 'http://publicradio1.wpengine.netdna-cdn.com/updraft/files/2016/12/1222-x.gif' },
+  { category: 'Rainy',
+    name: 'Light Intensity Drizzle',
+    description: 'A placeholder description for weather base',
+    basePrice: '591.42',
+    imageURL: 'http://www.eumetrain.org/satmanu/CMs/BoHi/media/images/GOES13_IR_20150201_color_anim.gif' },
+  { category: 'Rainy',
+    name: 'Thunderstorm with Heavy Rain',
+    description: 'A placeholder description for weather base',
+    basePrice: '414.99',
+    imageURL: 'http://h.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2014/05/3030938-poster-2014-05-22-082317.gif' },
+  { category: 'Snowy',
+    name: 'Light Rain and Snow',
+    description: 'A placeholder description for weather base',
+    basePrice: '316.61',
+    imageURL: 'http://publicradio1.wpengine.netdna-cdn.com/updraft/files/2016/11/1121-gif.gif' },
+  { category: 'Rainy',
+    name: 'Very Heavy Rain',
+    description: 'A placeholder description for weather base',
+    basePrice: '394.08',
+    imageURL: 'https://media.ford.com/content/dam/fordmedia/Europe/en/2016/09/WDL_COMP.gif' },
+  { category: 'Rainy',
+    name: 'Light Intensity Drizzle Rain',
+    description: 'A placeholder description for weather base',
+    basePrice: '113.25',
+    imageURL: 'http://i57.tinypic.com/2wokvfo.gif' },
+  { category: 'Rainy',
+    name: 'Heavy Intensity Drizzle Rain',
+    description: 'A placeholder description for weather base',
+    basePrice: '241.52',
+    imageURL: 'http://www.aos.wisc.edu/~sco/clim-watch/graphics/pdsi-ts-07-l.gif' },
+  { category: 'Rainy',
+    name: 'Shower Rain and Drizzle',
+    description: 'A placeholder description for weather base',
+    basePrice: '840.80',
+    imageURL: 'http://images.clipartpanda.com/rain-clipart-9ipbyMd7T.gif' },
+  { category: 'Rainy',
+    name: 'Thunderstorm with Drizzle',
+    description: 'A placeholder description for weather base',
+    basePrice: '213.54',
+    imageURL: 'http://www.australianweathernews.com/images/wxcode1.gif' },
+  { category: 'Rainy',
+    name: 'Thunderstorm with Heavy Drizzle',
+    description: 'A placeholder description for weather base',
+    basePrice: '901.51',
+    imageURL: 'http://www.australianweathernews.com/images/wxcode1.gif' },
+  { category: 'Rainy',
+    name: 'Drizzle',
+    description: 'A placeholder description for weather base',
+    basePrice: '873.54',
+    imageURL: 'http://mp1.met.psu.edu/~fxg1/NAMSFC4_0z/rad14.gif' },
+  { category: 'Rainy',
+    name: 'Heavy Thunderstorm',
+    description: 'A placeholder description for weather base',
+    basePrice: '672.02',
+    imageURL: 'http://cimss.ssec.wisc.edu/goes/blog/wp-content/uploads/2016/02/160202_goes14_infrared_zoom_MS_AL_thunderstorms_anim.gif' },
+  { category: 'Rainy',
+    name: 'Thunderstorm',
+    description: 'A placeholder description for weather base',
+    basePrice: '987.19',
+    imageURL: 'http://www2.arnes.si/~oskplucija4/evreme/Storm.gif' },
+  { category: 'Rainy',
+    name: 'Shower Rain',
+    description: 'A placeholder description for weather base',
+    basePrice: '772.89',
+    imageURL: 'http://weather.graphics/hrrr/2016121107/nashville/hrrr_2016121107_ref_nashville.gif' },
+  { category: 'Rainy',
+    name: 'Moderate Rain',
+    description: 'A placeholder description for weather base',
+    basePrice: '149.31',
+    imageURL: 'http://www.vu3rgk.com/weather/201611301840.gif' },
+  { category: 'Snowy',
+    name: 'Light Snow',
+    description: 'A placeholder description for weather base',
+    basePrice: '301.33',
+    imageURL: 'http://3.bp.blogspot.com/-b2nEca9R-mQ/USaWunTQtMI/AAAAAAAAIKs/xoCAbXoI2U0/s1600/nam-hires_namer_018_sim_reflectivity6am.gif' },
+  { category: 'Snowy',
+    name: 'Shower Sleet',
+    description: 'A placeholder description for weather base',
+    basePrice: '291.98',
+    imageURL: 'http://www.boston.com/news/weather/weather_wisdom/mothsf%20weather%20asfd%201.gif' },
+  { category: 'Rainy',
+    name: 'Ragged Thunderstorm',
+    description: 'A placeholder description for weather base',
+    basePrice: '741.21',
+    imageURL: 'http://cimss.ssec.wisc.edu/goes/blog/wp-content/uploads/2015/07/H83WV_CHANHOM_8-10JULYanim.gif' },
+  { category: 'Rainy',
+    name: 'Extreme Rain',
+    description: 'A placeholder description for weather base',
+    basePrice: '119.82',
+    imageURL: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/MeanMonthlyP.gif' },
+  { category: 'Snowy',
+    name: 'Rain and Snow',
+    description: 'A placeholder description for weather base',
+    basePrice: '466.91',
+    imageURL: 'http://i.imgur.com/Ulc6vOd.gif' },
+  { category: 'Cloudy',
+    name: '',
+    description: 'A placeholder description for weather base',
+    basePrice: '892.67',
+    imageURL: 'http://media4.giphy.com/media/112LTQrUyIqr1C/giphy.gif' } ]
