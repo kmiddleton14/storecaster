@@ -43,9 +43,17 @@ module.exports = require('express').Router()
 			name,
 			imageURL
 		})
-			.then(createdPackage => createdPackage.basePrice()
-				.then(() => res.status(201).json(createdPackage)))
-			.catch(console.log)
+			.then(createdPackage => 
+				Package.findOne({
+					where: {
+						id: createdPackage.id
+					},
+					include: [{
+						all: true
+					}]
+				}))
+				.then(foundPackage => foundPackage.basePrice()
+				.then(() => res.status(201).json(foundPackage)))
 			.catch(next)
 		})
 	.post('/createWithExtras', (req, res, next) => {
@@ -55,7 +63,6 @@ module.exports = require('express').Router()
         // packageType: 'custom', 
         // extraIdsArray: [1, 2] 
         // }
-        console.log(req.body);
 		const defaultName = `${req.body.base.name} with Mixins`
 		const defaultDescription = `A beautiful ${req.body.base.name} that is spiced up with custom add-ins`
 		return Package.createWithExtras(req.body.base.id, req.body.packageType, req.body.extraIdsArray, defaultName, defaultDescription, 'https://raphaelhertzog.com/files/2010/10/new-package-magic-300x228.jpg')

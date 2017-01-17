@@ -57,14 +57,12 @@ module.exports = require('express').Router()
   .post('/', (req, res, next) => {
     Order.create(req.body.order)
     .then(createdOrder => {
-      // console.dir(createdOrder)
       return OrderPackage.create({
         order_id: createdOrder.id,
         package_id: req.body.package_id,
         //dateScheduled: req.body.dateScheduled
       })
       .then( newOrderPackage => {
-        // console.log(newOrderPackage);
         return OrderPackage.findOne({
           where: {
             order_id: createdOrder.id
