@@ -3,6 +3,7 @@ import axios from 'axios'
 const initialProductsState = {
   packages: [],
   bases: [],
+  extras: [],
   selectedPackage: {},
   selectedBase: {} //TODO: for customization user stories
 }
@@ -20,6 +21,10 @@ const reducer = (state=initialProductsState, action) => {
       newState.packages = action.packages
       break 
 
+    case RECEIVE_EXTRAS:
+      newState.extras = action.weatherextras
+      break 
+
     case RECEIVE_PRODUCT:
       action.selectedProduct.category 
       ? newState.selectedBase = action.selectedProduct
@@ -32,7 +37,12 @@ const reducer = (state=initialProductsState, action) => {
     return newState
 }
 
-const RECEIVE_BASES = 'RECEIVE_BASES', RECEIVE_PACKAGES = 'RECEIVE_PACKAGES', RECEIVE_PRODUCT = 'RECEIVE_PRODUCT'
+const RECEIVE_BASES = 'RECEIVE_BASES', RECEIVE_PACKAGES = 'RECEIVE_PACKAGES', RECEIVE_PRODUCT = 'RECEIVE_PRODUCT', RECEIVE_EXTRAS = 'RECEIVE_EXTRAS'
+
+export const receiveExtras = weatherextras => ({
+  type: RECEIVE_EXTRAS,
+  weatherextras
+})
 
 export const receiveBases = weatherbases => ({
   type: RECEIVE_BASES,
@@ -57,12 +67,14 @@ export const loadAllProducts = () =>
   dispatch => 
     Promise.all([
       axios.get('/api/weatherbases'),
-      axios.get('/api/packages')
+      axios.get('/api/packages'),
+      axios.get('/api/weatherextras'),
     ])
       .then(responses => responses.map(r => r.data))
-      .then(([weatherbases, packages]) => {
+      .then(([weatherbases, packages, weatherextras]) => {
         dispatch(receiveBases(weatherbases))
         dispatch(receivePackages(packages))
+        dispatch(receiveExtras(weatherextras))
       })
 
 export default reducer

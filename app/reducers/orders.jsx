@@ -28,15 +28,26 @@ export const setOrder = order => ({
   order
 })
 
-export const createOrder = (product, user_id=null) => 
-  dispatch => //TODO: create package if product supplied is a base; include extras
+//checks to see if the base and addons passed in already exist as a package; if not then create one and return it otherwise just return the package 
+export const createPackageAndAddToCart = (base, extrasArray) => 
+  dispatch => 
+    axios.post('/api/packages/createWithExtras', {
+      base: base, 
+      packageType: 'custom', 
+      extraIdsArray: extrasArray.map(e => e.id)
+    })
+    .then(r => r.data)
+    .then(pkg => dispatch(createOrder(pkg)))
+
+export const createOrder = (pkg, user_id=null) => 
+  dispatch => 
     axios.post('/api/orders/', {
       order: {
         user_id,
-        totalPrice: product.base.basePrice, //this will change when we introduce customization options
+        totalPrice: pkg.price, //this will change when we introduce customization options
         status: 'Created'
       },
-      package_id: product.id //this will change when we introduce customization options
+      package_id: pkg.id //this will change when we introduce customization options
     })
     .then(r => r.data.order)
     //r.data is an object with info from the OrderPackage table, with the associated order and package included through eager loading. It looks like this: 
