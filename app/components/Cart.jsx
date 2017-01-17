@@ -23,14 +23,22 @@ export default function (props) {
   const startDateInputValue = props.startDateInputValue;
 
   return (
-    <div >
+    <div className="text-center">
       <h1>Your Cart</h1>
       <h3>Review your cart before checkout</h3>
 
-      <div>
-        <img src={selectedPackage.imageURL} />
-        <h3>{selectedPackage.name}</h3>
-        <h4>Package Description: {selectedPackage.description}</h4>
+      <h3><u>Your Selected Package</u></h3>
+
+      <div className="row">
+        <div className="col-sm-6 col-md-4">
+          <div className="thumbnail">
+            <img src={selectedPackage.imageURL} />
+            <div className="caption">
+              <h3>{selectedPackage.name}</h3>
+              <p>{selectedPackage.description}</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <form onSubmit={handleSubmit}>
@@ -58,13 +66,15 @@ export default function (props) {
           </div>
           <div>
             <label>Weather Start Date:</label>
-            <DatePicker
-              dateFormat="MM/DD/YYYY"
-              placeholderText="Click to select a date"
-              todayButton={"Today"}
-              selected={startDateInputValue}
-              onChange={handleDateChange}
-            />
+            <div>
+              <DatePicker
+                dateFormat="MM/DD/YYYY"
+                placeholderText="Click to select a date"
+                todayButton={"Today"}
+                selected={startDateInputValue}
+                onChange={handleDateChange}
+              />
+            </div>
           </div>
         </fieldset>
         <h3>Your Total: {totalPrice}</h3>
