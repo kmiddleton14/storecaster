@@ -109,7 +109,7 @@ describe('/api/orders', () => {
         })
         .expect(201)
         .expect(function(res) {
-          console.log(res.body)
+          // console.log(res.body)
           expect(res.body).to.be.an('object');
           expect(res.body.order_id).to.equal(3007);
           expect(res.body.package_id).to.equal(packageId);
