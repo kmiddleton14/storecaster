@@ -27,7 +27,7 @@ export default class Video extends Component {
       <div>
         <div className="video-background">
             <div className="video-foreground">
-              <iframe src="https://www.youtube.com/embed/SAvLtVXzXZc?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=SAvLtVXzXZc" frameBorder="0" allowFullScreen></iframe>
+              <iframe src="https://www.youtube.com/embed/GquEnoqZAK0?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=GquEnoqZAK0" frameBorder="0" allowFullScreen></iframe>
             </div>
           </div>
 
@@ -36,7 +36,7 @@ export default class Video extends Component {
             <h1>Your current weather is 40 degrees and raining</h1>
             <h2>.....but it doesn't have to be</h2>
             <Link to='/products'>
-              <button type='button'><h3>Change your weather</h3></button>
+              <button className='btn btn-default' type='button'>Change your weather</button>
             </Link>
            
           </div>
