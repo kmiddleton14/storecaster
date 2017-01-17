@@ -11,7 +11,7 @@ export default class Navbar extends Component {
       <div>
         <nav className="navbar navbar-default">
           <div className="container-fluid">
-            
+
             <div className="navbar-header">
               <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span className="sr-only">Toggle navigation</span>
@@ -19,17 +19,17 @@ export default class Navbar extends Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <Link className="navbar-brand" to='/home'>Storecaster</Link>
+              <Link className="navbar-brand" to='/home'><img src='/storecaster_logo.png' /></Link>
             </div>
 
-           
+
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav">
-                <li className="active"><Link to='/products'>All Products <span className="sr-only">(current)</span></Link></li>
-                
-                
+                <li><Link to='/products'>All Products <span className="sr-only">(current)</span></Link></li>
+
+
               </ul>
-              
+
               <ul className="nav navbar-nav navbar-right">
                 <li>{this.props.user ? <WhoAmI/> : <Login/>}</li>
                 <li><Link to='cart' className='glyphicon glyphicon-shopping-cart' /></li>

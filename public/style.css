@@ -15,8 +15,6 @@
   color:red !important;
 }
 
-
-
 * { box-sizing: border-box; }
 .video-background {
   background: #000;
@@ -52,3 +50,7 @@
 .vid-info .acronym { display: none; }
 }
 
+.navbar-brand>img {
+    display: block;
+    height: 100%;
+}
