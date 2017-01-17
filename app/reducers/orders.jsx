@@ -58,7 +58,7 @@ export const createOrder = (pkg, user_id=null) =>
       },
       package_id: pkg.id //this will change when we introduce customization options
     })
-    .then(r => r.data.order)
+    .then(r => r.data)
     //r.data is an object with info from the OrderPackage table, with the associated order and package included through eager loading. It looks like this:
       // { dateScheduled: null,
       // created_at: ...

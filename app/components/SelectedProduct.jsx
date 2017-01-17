@@ -19,14 +19,16 @@ class SelectedProduct extends Component {
       this.setState({
         selectedExtras: arr
       })
-    } else this.setState({
+    } else {
+      this.setState({
         selectedExtras: this.state.selectedExtras.concat([extra])
       })
+    }
   }
 
   render() {
     const createPackageAndAddToCart = this.props.createPackageAndAddToCart
-    const selectedPackage = this.props.selectedPackage
+    const selectedPackage = this.props.selectedPackage 
     const extras = this.props.extras
 
     return ( 
@@ -36,7 +38,7 @@ class SelectedProduct extends Component {
         <img 
           src={selectedPackage.imageURL} 
         />
-        <h3>Price: ${selectedPackage.base.basePrice}</h3>
+        <h3>Price: ${selectedPackage.price}</h3>
         <CustomsRow items={extras} selectItem={this.toggleExtra}/>
         <Link to='/cart' onClick={() => createPackageAndAddToCart(selectedPackage.base, this.state.selectedExtras)}>
           <button type='button'><h3>Add to cart</h3></button>
