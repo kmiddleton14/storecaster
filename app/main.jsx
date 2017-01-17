@@ -6,6 +6,7 @@ import {connect, Provider} from 'react-redux'
 
 import store from './store'
 import Home from './components/Home'
+import Cart from './containers/CartContainer'
 import Products from './components/Products'
 import SelectedProduct from './components/SelectedProduct'
 import Navbar from './components/Navbar'
@@ -20,7 +21,8 @@ const App = connect(
     <div>
       <nav>
         <Navbar user={user}/>
-      </nav> 
+
+      </nav>
       {children}
     </div>
 )
@@ -35,6 +37,7 @@ render (
       <Route path="/" component={App}>
         <IndexRedirect to="/home" />
         <Route path="/home" component={Home} />
+        <Route path="/cart" component={Cart} />
         <Route path="/products" component={Products} onEnter={onProductsEnter}/>
         <Route path="/selectedproduct" component={SelectedProduct}/>
         <Route path="/confirmation" component={Confirmation} />
