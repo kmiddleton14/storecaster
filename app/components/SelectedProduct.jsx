@@ -8,7 +8,7 @@ class SelectedProduct extends Component {
     this.state = {
       selectedExtras: [], //consider using set data type to enforce uniqueness
     }
-    this.addExtra = this.addExtra.bind(this)
+    this.toggleExtra = this.toggleExtra.bind(this)
   }
 
   toggleExtra (extra) {
