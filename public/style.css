@@ -1,3 +1,20 @@
+.body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.element {
+  height:1000px;
+  background-color: #ededed;
+  font-size: 45px;
+  border-top:1px solid #000;
+  padding-top:55px;
+  padding-left:10px;
+}
+
+.active {
+  color:red !important;
+}
+
 * { box-sizing: border-box; }
 .video-background {
   background: #000;
@@ -34,3 +51,9 @@
 @media all and (max-width: 500px) {
 .vid-info .acronym { display: none; }
 }
+
+.navbar-brand>img {
+    display: block;
+    height: 100%;
+}
+
