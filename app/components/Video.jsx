@@ -36,7 +36,7 @@ export default class Video extends Component {
             <h1>Your current weather is 40 degrees and raining</h1>
             <h2>.....but it doesn't have to be</h2>
             <Link to='/products'>
-              <button className='btn btn-default' type='button'>Change your weather</button>
+              <button className='btn btn-default btn-lg' type='button'>Let's change your weather</button>
             </Link>
            
           </div>

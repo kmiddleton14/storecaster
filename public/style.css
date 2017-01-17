@@ -18,7 +18,8 @@
   top: 0;
   color: #fff;
 }
-.vid-info { position: absolute; top: 50%; right: 50%; width: 45%; background: rgba(0,0,0,0.6); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info { position: absolute; top: 33%; right: 50%; width: 45%; background: rgba(0,0,0,0.6); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h2 { text-align: center; margin-bottom: 20px; }
 .vid-info a { display: block; color: #fff; text-decoration: none; transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
 @media (min-aspect-ratio: 16/9) {
   .video-foreground { height: 300%; top: -100%; }
