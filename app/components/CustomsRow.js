@@ -45,7 +45,7 @@ export default ({ items=[], selectItem }) =>
             //     item.category && 
             //     <div><h1>{item.category}</h1></div>
             //   }
-            <Link key={item.id} to={`/cart`} onClick={() => selectItem(item)}>
+            <Link key={item.id} onClick={() => selectItem(item)}>
               <GridTile
                 key={item.id}
                 title={item.name}
