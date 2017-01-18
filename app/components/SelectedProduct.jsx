@@ -28,7 +28,7 @@ class SelectedProduct extends Component {
 
   render() {
     const createPackageAndAddToCart = this.props.createPackageAndAddToCart
-    const selectedPackage = this.props.selectedPackage 
+    const selectedPackage = this.props.selectedPackage
     const extras = this.props.extras
 
     const extrasDisplay = () => this.state.selectedExtras && this.state.selectedExtras.map(
@@ -36,20 +36,20 @@ class SelectedProduct extends Component {
               <h3>You have added {e.name} at ${e.basePrice}. Click here or on the picture of the extra to remove.</h3>
             </Link>))
 
-    return ( 
-      <div>
-        <h1>Your selected product is: {selectedPackage.name}</h1>
-        <h2>Description: {selectedPackage.description}</h2>
-        <img 
-          src={selectedPackage.imageURL} 
+    return (
+      <div className="text-center">
+        <h2>Your selected product is: </h2>
+        <h3>{selectedPackage.name}</h3>
+        <h3>Description: {selectedPackage.description}</h3>
+        <img
+          src={selectedPackage.imageURL}
         />
-        <h3>Price: ${selectedPackage.price}</h3>
         {
           this.state.selectedExtras && extrasDisplay()
         }
         <CustomsRow items={extras} selectItem={this.toggleExtra}/>
         <Link to='/cart' onClick={() => createPackageAndAddToCart(selectedPackage.base, this.state.selectedExtras)}>
-          <button type='button'><h3>Add to cart</h3></button>
+          <button className="btn btn-default" type='button'>Add to cart</button>
         </Link>
       </div>
     )
@@ -61,8 +61,8 @@ import {createPackageAndAddToCart} from 'APP/app/reducers/orders'
 import {connect} from 'react-redux'
 
 export default connect (
-  (state, ownProps) => ({ 
-    selectedPackage: state.products.selectedPackage, 
+  (state, ownProps) => ({
+    selectedPackage: state.products.selectedPackage,
     extras: state.products.extras
   }),{createPackageAndAddToCart},
 ) (SelectedProduct)

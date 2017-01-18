@@ -48,8 +48,6 @@ export default function (props) {
       <h1>Your Cart</h1>
       <h3>Review your cart before checkout</h3>
 
-
-
       <MuiThemeProvider>
       <div style={styles.root}>
           <GridList
