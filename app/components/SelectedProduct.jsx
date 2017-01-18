@@ -31,6 +31,11 @@ class SelectedProduct extends Component {
     const selectedPackage = this.props.selectedPackage 
     const extras = this.props.extras
 
+    const extrasDisplay = () => this.state.selectedExtras && this.state.selectedExtras.map(
+      e => (<Link onClick={() => this.toggleExtra(e)} key={e.id}>
+              <h3>You have added {e.name} at ${e.basePrice}. Click here or on the picture of the extra to remove.</h3>
+            </Link>))
+
     return ( 
       <div>
         <h1>Your selected product is: {selectedPackage.name}</h1>
@@ -39,6 +44,9 @@ class SelectedProduct extends Component {
           src={selectedPackage.imageURL} 
         />
         <h3>Price: ${selectedPackage.price}</h3>
+        {
+          this.state.selectedExtras && extrasDisplay()
+        }
         <CustomsRow items={extras} selectItem={this.toggleExtra}/>
         <Link to='/cart' onClick={() => createPackageAndAddToCart(selectedPackage.base, this.state.selectedExtras)}>
           <button type='button'><h3>Add to cart</h3></button>
