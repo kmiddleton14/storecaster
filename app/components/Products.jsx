@@ -1,13 +1,14 @@
 import React from 'react';
 import ProductsRow from './ProductsRow';
 
-export const Products = ({ products, pickProduct }) => ( 
+export const Products = ({ products, pickProduct }) => (
   <div>
     <h1>Your Weather, Your Way</h1>
-    <ProductsRow 
-      products={products.packages} 
+    <h4>Select Your Starting Package</h4>
+    <ProductsRow
+      products={products.packages}
       pickProduct={pickProduct}
-    />     
+    />
   </div>
 )
 
