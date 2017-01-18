@@ -127,21 +127,25 @@ describe('/api/packages', () => {
     describe('POST creates a package', () => {
 
       it('POST to / creates a package without addons', () => 
-        request(app)
-          .post('/api/packages')
-          .send({
-            base_id: 1,
-            name: 'Snow Day for the slopes',
-            description: 'Best skiing snow around',
-            imageURL: 'https://media.giphy.com/media/VxbvpfaTTo3le/giphy.gif',
-            packageType: 'template'
-          })
-          .expect(201)
-          .expect(function(res) {
+        WeatherBase.findById(1)
+          .then(base => 
+            request(app)
+              .post('/api/packages')
+              .send({
+                base,
+                name: 'Snow Day for the slopes',
+                description: 'Best skiing snow around',
+                imageURL: 'https://media.giphy.com/media/VxbvpfaTTo3le/giphy.gif',
+                packageType: 'template'
+              })
+              .expect(201)
+              .expect(function(res) {
 
-            //checks that the base price has been calculated for package
-            expect(res.body).to.have.property('price', 50.00)
-          })
+                //checks that the base price has been calculated for package
+                expect(res.body).to.have.property('price', 50.00)
+
+              })
+            )
       )
 
       it('POST to /createWithExtras creates a package with addons and adds associations to the weatherextras table through the packageextras pivot table', () => 

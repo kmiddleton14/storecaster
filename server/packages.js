@@ -31,11 +31,31 @@ module.exports = require('express').Router()
 		.then(foundPackage => foundPackage.basePrice()
 			.then(() => res.status(200).json(foundPackage)))
 		.catch(next))
-	.post('/', /*forbidden('only admins can create a package'),*/ (req, res, next) =>
-		Package.create(req.body)
-		.then(createdPackage => createdPackage.basePrice()
-			.then(() => res.status(201).json(createdPackage)))
-		.catch(next))
+	.post('/', /*forbidden('only admins can create a package'),*/ (req, res, next) => {
+		//req.body: { base, packageType[, description, name, imageURL ]}
+		const name = req.body.name || `Made-to-order ${req.body.base.category} weather package`
+		const description = req.body.description || `A fabulous ${req.body.base.name} made just for you`
+		const imageURL = req.body.imageURL || null
+		return Package.create({
+			base_id: req.body.base.id, 
+			packageType: req.body.packageType,
+			description,
+			name,
+			imageURL
+		})
+			.then(createdPackage => 
+				Package.findOne({
+					where: {
+						id: createdPackage.id
+					},
+					include: [{
+						all: true
+					}]
+				}))
+				.then(foundPackage => foundPackage.basePrice()
+				.then(() => res.status(201).json(foundPackage)))
+			.catch(next)
+		})
 	.post('/createWithExtras', (req, res, next) => {
 		//req.body looks like this:
 		// {
@@ -43,12 +63,10 @@ module.exports = require('express').Router()
         // packageType: 'custom', 
         // extraIdsArray: [1, 2] 
         // }
-        // console.log(req.body);
-		const defaultName = `${req.body.base.name} with mixins`
+		const defaultName = `${req.body.base.name} with Mixins`
 		const defaultDescription = `A beautiful ${req.body.base.name} that is spiced up with custom add-ins`
 		return Package.createWithExtras(req.body.base.id, req.body.packageType, req.body.extraIdsArray, defaultName, defaultDescription, 'https://raphaelhertzog.com/files/2010/10/new-package-magic-300x228.jpg')
-			.then(createdPkg => 
-				createdPkg.basePrice()
+			.then(createdPkg => createdPkg.basePrice()
 				.then(() => res.status(201).json(createdPkg)))
 			.catch(next)		
 		})
