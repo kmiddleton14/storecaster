@@ -3,6 +3,25 @@ import {Link} from 'react-router';
 import DatePicker from 'react-datepicker';
 
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {GridList, GridTile} from 'material-ui/GridList';
+import IconButton from 'material-ui/IconButton';
+import Subheader from 'material-ui/Subheader';
+import StarBorder from 'material-ui/svg-icons/toggle/star-border';
+
+const styles = {
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+  },
+  gridList: {
+    width: 900,
+    height: 450,
+    overflowY: 'auto',
+  },
+};
+
 //pubrequire('react-datepicker/dist/react-datepicker.css');
 
 export default function (props) {
@@ -22,16 +41,39 @@ export default function (props) {
   const cityInputValue = props.cityInputValue;
   const startDateInputValue = props.startDateInputValue;
 
+
+
   return (
-    <div >
+    <div className="text-center">
       <h1>Your Cart</h1>
       <h3>Review your cart before checkout</h3>
 
-      <div>
-        <img src={selectedPackage.imageURL} />
-        <h3>{selectedPackage.name}</h3>
-        <h4>Package Description: {selectedPackage.description}</h4>
-      </div>
+
+
+      <MuiThemeProvider>
+      <div style={styles.root}>
+          <GridList
+            cellHeight={400}
+            style={styles.gridList}
+          >
+            
+              <GridTile
+                key={selectedPackage.id}
+                title={selectedPackage.name}
+                subtitle={selectedPackage.description}
+                actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
+              >
+                <img src={selectedPackage.imageURL} />
+              </GridTile>
+
+
+           
+          </GridList>
+        </div>
+      </MuiThemeProvider>
+
+
+    
 
       <form onSubmit={handleSubmit}>
         <fieldset>
@@ -58,13 +100,15 @@ export default function (props) {
           </div>
           <div>
             <label>Weather Start Date:</label>
-            <DatePicker
-              dateFormat="MM/DD/YYYY"
-              placeholderText="Click to select a date"
-              todayButton={"Today"}
-              selected={startDateInputValue}
-              onChange={handleDateChange}
-            />
+            <div>
+              <DatePicker
+                dateFormat="MM/DD/YYYY"
+                placeholderText="Click to select a date"
+                todayButton={"Today"}
+                selected={startDateInputValue}
+                onChange={handleDateChange}
+              />
+            </div>
           </div>
         </fieldset>
         <h3>Your Total: {totalPrice}</h3>

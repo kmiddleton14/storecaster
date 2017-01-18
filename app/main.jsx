@@ -14,6 +14,11 @@ import Confirmation from './components/Confirmation'
 
 import { loadAllProducts } from './reducers/products'
 
+//materialize
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
+
 const App = connect(
   ({ auth }) => ({ user: auth })
 ) (
