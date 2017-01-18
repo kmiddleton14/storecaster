@@ -15,17 +15,17 @@ const seedExtras = () => db.Promise.map(extras, extra => db.model('weatherextra'
 const seedPackages = () => db.Promise.map([
   {
     id: 1,
-    name: 'Sun with extra sparkle',
-    description: 'A fun package for your vacation',
-    imageURL: 'https://media.giphy.com/media/VxbvpfaTTo3le/giphy.gif',
+    name: 'Sun With Extra Sparkle',
+    description: 'Beautiful sunny skies for your perfect vacation, sunblock required.',
+    imageURL: 'https://media.giphy.com/media/UL3OeJc5w7qRq/source.gif',
     packageType: 'template',
     base_id: 1,
   },
     {
     id: 2,
-    name: 'The ultimate thunderstorm',
-    description: 'This thunderstorm will be the biggest you have ever experienced',
-    imageURL: 'https://media.giphy.com/media/VxbvpfaTTo3le/giphy.gif',
+    name: 'The Ultimate Thunderstorm',
+    description: 'A powerful rainstorm accompanied by a frequent crack of lightning.',
+    imageURL: 'https://media.giphy.com/media/8xY1YYpEZ4dws/giphy.gif',
     packageType: 'custom',
     base_id: 2,
     },
@@ -34,14 +34,14 @@ const seedPackages = () => db.Promise.map([
 db.didSync
   .then(() => db.sync({force: true}))
   .then(seedUsers)
-  .then(users => console.log(`Seeded ${users.length} users OK`))  
-  .then(seedCities)
-  .then(cities => console.log(`Seeded ${cities.length} cities OK`))  
+  .then(users => console.log(`Seeded ${users.length} users OK`))
+  //.then(seedCities)
+  //.then(cities => console.log(`Seeded ${cities.length} cities OK`))
   .then(seedBases)
-  .then(bases => console.log(`Seeded ${bases.length} bases OK`))  
+  .then(bases => console.log(`Seeded ${bases.length} bases OK`))
   .then(seedExtras)
-  .then(extras => console.log(`Seeded ${extras.length} extras OK`))  
+  .then(extras => console.log(`Seeded ${extras.length} extras OK`))
   .then(seedPackages)
   .then(packages => console.log(`Seeded ${packages.length} packages OK`))
-  .catch(error => console.error(error))    
+  .catch(error => console.error(error))
   .finally(() => db.close())

@@ -57,25 +57,20 @@ module.exports = require('express').Router()
   .post('/', (req, res, next) => {
     Order.create(req.body.order)
     .then(createdOrder => {
-      // console.dir(createdOrder)
       return OrderPackage.create({
         order_id: createdOrder.id,
         package_id: req.body.package_id,
         //dateScheduled: req.body.dateScheduled
       })
-      .catch(console.error)
       .then( newOrderPackage => {
-        // console.log(newOrderPackage);
         return OrderPackage.findOne({
           where: {
             order_id: createdOrder.id
           },
-          include: [{ all: true }],
+          include: [{ all: true, nested: true }],
         })
       })
-      .then(fullOrderInfo => {
-        res.status(201).json(fullOrderInfo)
-      })
+      .then(fullOrderInfo => res.status(201).json(fullOrderInfo))
       .catch(next)
     })
   })

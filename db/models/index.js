@@ -29,10 +29,11 @@ User.hasMany(Review, {foreignKey: 'author_id'})
 
 Order.belongsToMany(Package, { through: 'orderpackage' })
 OrderPackage.belongsTo(Order)
-
+Order.hasMany(OrderPackage, {foreignKey: 'order_id'})
 
 OrderPackage.belongsTo(Package)
 Package.belongsToMany(Order, { through: 'orderpackage' })
+Package.hasMany(OrderPackage, {foreignKey: 'package_id'})
 
 Order.belongsTo(User, {as: 'user'})
 User.hasMany(Order, {foreignKey: 'user_id'})

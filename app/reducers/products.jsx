@@ -60,8 +60,18 @@ export const receiveProduct = selectedProduct => ({
 })
 
 export const pickProduct = selectedProduct => 
-  dispatch => 
-    dispatch(receiveProduct(selectedProduct))
+  dispatch => {
+    if (!selectedProduct.category) { //goes straight to product selection for package
+      dispatch(receiveProduct(selectedProduct))
+    } else { //create a package from the base
+      return axios.post('/api/packages/', {
+        packageType: 'custom', 
+        base: selectedProduct
+      })
+      .then(r => r.data)
+      .then(pkg => dispatch(receiveProduct(pkg)))
+    }
+  }
 
 export const loadAllProducts = () => 
   dispatch => 
