@@ -3,6 +3,25 @@ import {Link} from 'react-router';
 import DatePicker from 'react-datepicker';
 
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {GridList, GridTile} from 'material-ui/GridList';
+import IconButton from 'material-ui/IconButton';
+import Subheader from 'material-ui/Subheader';
+import StarBorder from 'material-ui/svg-icons/toggle/star-border';
+
+const styles = {
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+  },
+  gridList: {
+    width: 900,
+    height: 450,
+    overflowY: 'auto',
+  },
+};
+
 //pubrequire('react-datepicker/dist/react-datepicker.css');
 
 export default function (props) {
@@ -22,24 +41,37 @@ export default function (props) {
   const cityInputValue = props.cityInputValue;
   const startDateInputValue = props.startDateInputValue;
 
+
+
   return (
     <div className="text-center">
       <h1>Your Cart</h1>
       <h3>Review your cart before checkout</h3>
 
-      <h3><u>Your Selected Package</u></h3>
+      <MuiThemeProvider>
+      <div style={styles.root}>
+          <GridList
+            cellHeight={400}
+            style={styles.gridList}
+          >
+            
+              <GridTile
+                key={selectedPackage.id}
+                title={selectedPackage.name}
+                subtitle={selectedPackage.description}
+                actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
+              >
+                <img src={selectedPackage.imageURL} />
+              </GridTile>
 
-      <div className="row">
-        <div className="col-sm-6 col-md-4">
-          <div className="thumbnail">
-            <img src={selectedPackage.imageURL} />
-            <div className="caption">
-              <h3>{selectedPackage.name}</h3>
-              <p>{selectedPackage.description}</p>
-            </div>
-          </div>
+
+           
+          </GridList>
         </div>
-      </div>
+      </MuiThemeProvider>
+
+
+    
 
       <form onSubmit={handleSubmit}>
         <fieldset>
