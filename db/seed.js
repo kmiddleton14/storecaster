@@ -17,17 +17,55 @@ const seedPackages = () => db.Promise.map([
     id: 1,
     name: 'Sun With Extra Sparkle',
     description: 'Beautiful sunny skies for your perfect vacation, sunblock required.',
-    imageURL: 'https://media.giphy.com/media/UL3OeJc5w7qRq/source.gif',
+    imageURL: 'https://media.giphy.com/media/WwJBRCWrpdTsk/giphy.gif',
     packageType: 'template',
-    base_id: 1,
+    base_id: 32,
+    price: 699.99
   },
     {
     id: 2,
     name: 'The Ultimate Thunderstorm',
-    description: 'A powerful rainstorm accompanied by a frequent crack of lightning.',
-    imageURL: 'https://media.giphy.com/media/8xY1YYpEZ4dws/giphy.gif',
-    packageType: 'custom',
+    description: 'A powerful rainstorm accompanied by frequent lightning strikes.',
+    imageURL: 'http://stormandsky.com/gif/4.gif',
+    packageType: 'template',
     base_id: 2,
+    price: 599.99
+    },
+    {
+    id: 3,
+    name: 'Winter Wonderland',
+    description: 'Turn your ski destination into a winter wonderland with a flurry of targeted blizzards.',
+    imageURL: 'https://68.media.tumblr.com/8bfc07f474e5fdff8b77d8a9280630ac/tumblr_oali2oVkqD1rc0yuao1_500.gif',
+    packageType: 'template',
+    base_id: 23,
+    price: 374.99
+    },
+    {
+    id: 4,
+    name: 'Overcast Skies',
+    description: 'Feeling blue? Your weather should reflect you.',
+    imageURL: 'https://media.giphy.com/media/3o7rc6sa2RvKo8K5EI/giphy.gif',
+    packageType: 'template',
+    base_id: 44,
+    price: 1499.99
+    },
+    {
+    id: 5,
+    name: 'Beach Bum Rays',
+    description: 'Make sure you get in a productive day of tanning by buying this package of clear skies and extra sun.',
+    imageURL: 'https://68.media.tumblr.com/6448069a7d82f5a2ae1a2aa46ed3da61/tumblr_o9z1ynISk91sd0k7to1_400.gif',
+    packageType: 'template',
+    base_id: 44,
+    price: 399.99
+    },
+    {
+    id: 6,
+    name: 'Sweater Weather',
+    description: 'Light drizzles outside set the scene for a perfect night in with a good book by the fireplace.',
+    imageURL: 'https://s-media-cache-ak0.pinimg.com/originals/bf/f5/d0/bff5d03a2b2ad8814abfedffadfd203d.gif',
+    packageType: 'template',
+    base_id: 24,
+    price: 299.99
     },
 ], package => db.model('package').create(package));
 
