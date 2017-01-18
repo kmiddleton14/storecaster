@@ -16,9 +16,14 @@ const styles = {
     justifyContent: 'space-around',
   },
   gridList: {
-    width: 900,
+    width: 1200,
     overflowY: 'auto',
+    borderRadius: 20,
   },
+  gridTile: {
+    borderRadius: 20,
+    padding: 20,
+  }
 };
 
 export default ({ products=[], pickProduct }) => 
@@ -28,6 +33,8 @@ export default ({ products=[], pickProduct }) =>
             <GridList
               cellHeight={400}
               style={styles.gridList}
+              cols={3}
+              padding={20}
             >
              {
               products.map(product => (
@@ -37,6 +44,7 @@ export default ({ products=[], pickProduct }) =>
                     title={product.name}
                     subtitle={product.description}
                     actionIcon={<AddToCart />}
+                    style={styles.gridTile}
                   >
                     <img src={product.imageURL} />
                   </GridTile>
