@@ -40,6 +40,9 @@ module.exports = app
   // Serve our api
   .use('/api', require('./api'))
 
+  // Redirect to GitHub repository
+  .get('/github', (req,res) => res.redirect('https://github.com/kmiddleton14/storecaster'))
+
   // Send index.html for anything else.
   .get('/*', (_, res) => res.sendFile(resolve(__dirname, '..', 'public', 'index.html')))
 
