@@ -1,176 +1,145 @@
-module.exports = [
-    {
+module.exports = [{
         "name": "Smoke",
-        "description": "A placeholder description for weather extra",
+        "description": "Eco-friendly smoke so you can party it up without coughing up a lung.",
         "basePrice": "115.93",
-        "imageURL": "https://media1.giphy.com/media/l4Jz5CBh4xwHQuzoQ/giphy.gif"
+        "imageURL": "https://49.media.tumblr.com/db3b68e5ccc2ebe25094b1e4c92aa0e2/tumblr_n18bh30XJk1qh588ko1_500.gif"
     },
     {
         "name": "Mist",
-        "description": "A placeholder description for weather extra",
+        "description": "Look at me, I'm as helpless as a kitten up a tree...get the weather extra that inspired generations of jazz singers!",
         "basePrice": "124.19",
-        "imageURL": "https://media1.giphy.com/media/l4Jz5CBh4xwHQuzoQ/giphy.gif"
+        "imageURL": "https://secure.static.tumblr.com/cc2c3f18b2d43b0c26cf1a52b5833e46/p0o9m4o/HGInxida1/tumblr_static_f58e6imgxs84c0coc4g4ww0gc_640_v2.gif"
     },
     {
         "name": "Sand, Dust Whirls",
-        "description": "A placeholder description for weather extra",
+        "description": "Dusty sand whirls will make your vacation complete!",
         "basePrice": "135.21",
-        "imageURL": "https://media0.giphy.com/media/erhTlp2pzz3kA/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/tqtZDj5BqC0CY/giphy.gif"
     },
     {
         "name": "Sand",
-        "description": "A placeholder description for weather extra",
+        "description": "Add a whirling sandstorm for 30 minutes.",
         "basePrice": "125.54",
-        "imageURL": "https://media4.giphy.com/media/xT5LMu3D5C8XNe34mQ/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/BXPlMrO9cyYTK/giphy.gif"
     },
     {
         "name": "Dust",
-        "description": "A placeholder description for weather extra",
+        "description": "Experience a taste of the Dust Bowl region with dust storms fresh from Kansas.",
         "basePrice": "61.95",
-        "imageURL": "https://media1.giphy.com/media/3o6ZsXzPwGpNiw5h1C/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/oeCV3yRsGnRew/giphy.gif"
     },
     {
         "name": "Haze",
-        "description": "A placeholder description for weather extra",
+        "description": "Guaranteed to be extra purple.",
         "basePrice": "145.62",
-        "imageURL": "https://media1.giphy.com/media/QTVuU87L1TUNa/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/6hNJHnfsuoFDa/giphy.gif"
     },
     {
         "name": "Volcanic Ash",
-        "description": "A placeholder description for weather extra",
+        "description": "Artisanal volcanic ash imported from Maui, Hawai'i goes perfect with any weather base.",
         "basePrice": "92.74",
-        "imageURL": "https://media3.giphy.com/media/tqWsgBsGTNjr2/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/tqWsgBsGTNjr2/giphy.gif"
     },
     {
         "name": "Tornado",
-        "description": "A placeholder description for weather extra",
+        "description": "Toto, I don't think we're in Kansas anymore... get ready for the biggest tornado you've ever seen!",
         "basePrice": "83.50",
-        "imageURL": "https://media2.giphy.com/media/l3fQ9iCZzAy3vRIAM/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/njuiTjHbhxvj2/source.gif"
     },
     {
         "name": "Squalls",
-        "description": "A placeholder description for weather extra",
+        "description": "Blustery winds - just make sure to moisturize!",
         "basePrice": "135.87",
-        "imageURL": "https://media1.giphy.com/media/2gYtk45mP7yco/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/7kIQGqvb8CAIo/giphy.gif"
     },
     {
         "name": "Hurricane",
-        "description": "A placeholder description for weather extra",
+        "description": "Rock me like a hurricane!",
         "basePrice": "132.09",
-        "imageURL": "https://media2.giphy.com/media/HmTLatwLWpTQk/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/HmTLatwLWpTQk/giphy.gif"
     },
     {
         "name": "Fog",
-        "description": "A placeholder description for weather extra",
+        "description": "Fog it up with SF Bay Area-level fogginess!",
         "basePrice": "87.54",
-        "imageURL": "https://media1.giphy.com/media/aAvJE6v5JStKE/giphy.gif"
-    },
-    {
-        "name": "Tornado",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "86.24",
-        "imageURL": "https://media2.giphy.com/media/l3fQ9iCZzAy3vRIAM/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/ZWRCWdUymIGNW/giphy.gif"
     },
     {
         "name": "Cold",
-        "description": "A placeholder description for weather extra",
+        "description": "Brrr! Buy this, and you have the perfect weather to show off your new winter coat!",
         "basePrice": "145.83",
-        "imageURL": "https://media1.giphy.com/media/3o6wrutEJahVlDv09W/giphy.gif"
+        "imageURL": "https://m.popkey.co/27b4b4/7QYpe.gif"
     },
     {
         "name": "Hot",
-        "description": "A placeholder description for weather extra",
+        "description": "Sweltering heat to make your package complete!",
         "basePrice": "104.01",
-        "imageURL": "https://media2.giphy.com/media/fAv2n4Tlhshig/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/26BREnyYXsPOxlUKk/giphy.gif"
     },
     {
         "name": "Windy",
-        "description": "A placeholder description for weather extra",
+        "description": "Perfect weather to shoot a hair commercial.",
         "basePrice": "107.45",
-        "imageURL": "https://media0.giphy.com/media/3ohfFxoiP6rbEZ4nrG/giphy.gif"
+        "imageURL": "https://media.tumblr.com/efd53e14ce05b7c05bcae68efe7d4a7a/tumblr_inline_mm1fweKZAJ1qz4rgp.gif"
     },
     {
-        "name": "Calm",
-        "description": "A placeholder description for weather extra",
+        "name": "Rainbow",
+        "description": "Roy G. Biv will thank you.",
         "basePrice": "54.02",
-        "imageURL": "https://media0.giphy.com/media/3o7TKIyZgIr2SMOyEo/giphy.gif"
+        "imageURL": "https://static.ddmcdn.com/gif/rainbow-gallery-1.jpg"
     },
     {
         "name": "Hail",
-        "description": "A placeholder description for weather extra",
+        "description": "Oh, hail no! Golf-ball-sized hailstones delivered just for you.",
         "basePrice": "57.37",
-        "imageURL": "https://media2.giphy.com/media/7MAP0THe77UGY/giphy.gif"
+        "imageURL": "https://media.tenor.co/images/aff91e4a1750e98906316f6b9a5f814b/raw"
     },
     {
-        "name": "Moderate Breeze",
-        "description": "A placeholder description for weather extra",
+        "name": "Precision Lightning Strike",
+        "description": "They say lightning never strikes the same place twice... but if you buy two of these, you'll prove them wrong!",
         "basePrice": "134.94",
-        "imageURL": "https://media2.giphy.com/media/BNhr4LR0oqLMQ/giphy.gif"
+        "imageURL": "http://bestanimations.com/Nature/Storms/thunder-lightning-strikes-storm-over-city-animated-gif.gif"
     },
     {
         "name": "Tropical Storm",
-        "description": "A placeholder description for weather extra",
+        "description": "Experience a monsoon like you've never dreamed of",
         "basePrice": "98.92",
-        "imageURL": "https://media4.giphy.com/media/9faUWuQF8JiQE/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/FpLeGOHk2MNi0/giphy.gif"
     },
     {
         "name": "Light Breeze",
-        "description": "A placeholder description for weather extra",
+        "description": "A nice light breeze to top off your spring day.",
         "basePrice": "61.52",
-        "imageURL": "https://media4.giphy.com/media/Y18iJ66pIkYiQ/giphy.gif"
+        "imageURL": "https://s-media-cache-ak0.pinimg.com/originals/fa/90/31/fa90319437261c5105ffad098b8c019a.gif"
     },
     {
         "name": "High Wind, Near Gale",
-        "description": "A placeholder description for weather extra",
+        "description": "Quality winds make for excellent surfing weather",
         "basePrice": "70.19",
-        "imageURL": "https://media4.giphy.com/media/AjkmeHTBh795K/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/kCuIvmjRuvL9e/giphy.gif"
     },
     {
-        "name": "Gentle Breeze",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "123.19",
-        "imageURL": "https://media3.giphy.com/media/IgYrZ4B0wh9pm/giphy.gif"
-    },
-    {
-        "name": "Strong Breeze",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "93.56",
-        "imageURL": "https://media1.giphy.com/media/aarhhJ5Nr4K0o/giphy.gif"
-    },
-    {
-        "name": "Gale",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "127.51",
-        "imageURL": "https://media2.giphy.com/media/mcSCSG8d9OvxC/giphy.gif"
-    },
-    {
-        "name": "Severe Gale",
-        "description": "A placeholder description for weather extra",
+        "name": "Double Rainbow",
+        "description": "Make the special day even more special with a double rainbow.",
         "basePrice": "105.40",
-        "imageURL": "https://media1.giphy.com/media/5C0p4TJ2szdDO/giphy.gif"
+        "imageURL": "https://media.giphy.com/media/cjrO2b4Ht4fAY/giphy.gif"
     },
     {
-        "name": "Violent Storm",
-        "description": "A placeholder description for weather extra",
+        "name": "Chance of Meatballs",
+        "description": "Approximately 50% chance of Italian seasoning meatballs.",
         "basePrice": "70.03",
-        "imageURL": "https://media3.giphy.com/media/etzZ21iEbCj96/giphy.gif"
+        "imageURL": "https://media4.giphy.com/media/Ou0AAOHJEM9Ms/giphy.gif"
     },
     {
-        "name": "Fresh Breeze",
-        "description": "A placeholder description for weather extra",
+        "name": "Raining Frogs",
+        "description": "An extra strong breeze will deliver you fresh bullfrogs from the nearest pond.",
         "basePrice": "94.58",
-        "imageURL": "https://media2.giphy.com/media/CZLkm7wsNcFI4/giphy.gif"
+        "imageURL": "https://www.scienceabc.com/wp-content/uploads/2016/10/yzgbj9eqafchrzscviil.gif"
     },
     {
-        "name": "Storm",
-        "description": "A placeholder description for weather extra",
+        "name": "Flash Floods",
+        "description": "Time to collect on your housing insurance.",
         "basePrice": "84.23",
-        "imageURL": "https://media2.giphy.com/media/l0MYwcdVgmWvjDPLW/giphy.gif"
-    },
-    {
-        "name": "Hurricane",
-        "description": "A placeholder description for weather extra",
-        "basePrice": "58.76",
-        "imageURL": "https://media2.giphy.com/media/HmTLatwLWpTQk/giphy.gif"
+        "imageURL": "https://i.makeagif.com/media/5-24-2015/OS1ZiU.gif"
     }
 ]
