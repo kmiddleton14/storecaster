@@ -7,15 +7,7 @@ export const Products = ({ products, pickProduct }) => (
     <ProductsRow 
       products={products.packages} 
       pickProduct={pickProduct}
-    />    
-    <ProductsRow 
-      products={products.packages} 
-      pickProduct={pickProduct}
-    />    
-    <ProductsRow 
-      products={products.bases} 
-      pickProduct={pickProduct}
-    />    
+    />     
   </div>
 )
 
